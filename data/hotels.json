@@ -1,0 +1,62 @@
+[
+  {
+    "id": "agapo-home-toledo",
+    "name": "Agapo Home",
+    "street": "6 Calle Cadena",
+    "city": "Toledo",
+    "postalCode": "45001",
+    "country": "ES",
+    "phone": "+34 658 50 11 01",
+    "photo": "assets/sample-hotel-toledo.jpg",
+    "checkinRange": "15:00 - 23:00",
+    "checkoutTime": "11:00",
+    "mealsPolicy": "equal",
+    "itineraryCity": "Toledo / Madrid",
+    "amenities": {
+      "internet": "wifi gratis",
+      "alimentos": "servicio a la habitación",
+      "descanso": "cortinas blackout",
+      "bano": "baño privado",
+      "infoPractica": "escritorio y plancha/tabla de planchar (previa solicitud); camas plegables/extra disponibles previa solicitud, y cunas gratuitas, también previa solicitud.",
+      "comodidades": "servicio de limpieza diario, petfriendly y sistemas de calefacción y aire acondicionado",
+      "accesoDiscapacitados": "acceso para silla de ruedas",
+      "infoImportante": "cunas o camas plegables/extra no disponibles",
+      "fumadores": "Para no fumadores"
+    },
+    "requisitos": [
+      "Es obligatorio dejar un depósito en efectivo, con tarjeta de débito o con tarjeta de crédito para cubrir gastos imprevistos",
+      "Es obligatorio presentar una identificación oficial válida",
+      "La edad mínima para realizar el check-in es de 18 años."
+    ]
+  },
+  {
+    "id": "valdavia-habitaciones-madrid",
+    "name": "Valdavia Habitaciones",
+    "street": "Calle marqués de la Valdavia 45",
+    "city": "Madrid",
+    "postalCode": "28100",
+    "country": "ES",
+    "phone": "+34 742 06 12 36",
+    "photo": "assets/sample-hotel-madrid.jpg",
+    "checkinRange": "15:00 - 23:00",
+    "checkoutTime": "11:00",
+    "mealsPolicy": "equal",
+    "itineraryCity": "Toledo / Madrid",
+    "amenities": {
+      "internet": "wifi gratis",
+      "alimentos": "servicio a la habitación",
+      "descanso": "cortinas blackout",
+      "bano": "baño privado",
+      "infoPractica": "escritorio y plancha/tabla de planchar (previa solicitud); camas plegables/extra disponibles previa solicitud, y cunas gratuitas, también previa solicitud.",
+      "comodidades": "servicio de limpieza diario, petfriendly y sistemas de calefacción y aire acondicionado",
+      "accesoDiscapacitados": "acceso para silla de ruedas",
+      "infoImportante": "cunas o camas plegables/extra no disponibles",
+      "fumadores": "Para no fumadores"
+    },
+    "requisitos": [
+      "Es obligatorio dejar un depósito en efectivo, con tarjeta de débito o con tarjeta de crédito para cubrir gastos imprevistos",
+      "Es obligatorio presentar una identificación oficial válida",
+      "La edad mínima para realizar el check-in es de 18 años."
+    ]
+  }
+]

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MacroViajes · Generador de documentos</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="app-header">
+  <img src="assets/logo.png" alt="MacroViajes">
+  <h1>Generador de documentos de reserva</h1>
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="generar">Generar documento</button>
+    <button class="tab-btn" data-tab="hoteles">Hoteles</button>
+    <button class="tab-btn" data-tab="itin">Itinerarios</button>
+  </div>
+</div>
+
+<!-- ======================= TAB: GENERAR ======================= -->
+<div class="tab-panel active" id="panel-generar">
+
+  <div class="hint">
+    El titular de la reserva será automáticamente el pasajero de <b>mayor edad</b>. El nombre del archivo PDF
+    descargado será su nombre completo en mayúsculas. Todos los pasajeros comparten la(s) misma(s) habitación(es)
+    en cada hotel; el tipo de habitación y la distribución de camas se calculan automáticamente según la cantidad
+    de huéspedes.
+  </div>
+
+  <div class="card">
+    <h2>1. Pasajeros</h2>
+    <div id="passengersBox"></div>
+    <button class="btn secondary" id="addPassengerBtn">+ Agregar pasajero</button>
+  </div>
+
+  <div class="card">
+    <h2>2. Hoteles y fechas de la reserva</h2>
+    <p class="muted">Agrega una fila por cada hotel del recorrido, en cualquier orden (se ordenarán automáticamente por fecha).</p>
+    <div id="staysBox"></div>
+    <button class="btn secondary" id="addStayBtn">+ Agregar hotel</button>
+  </div>
+
+  <div class="card" style="text-align:center;">
+    <button class="btn big" id="generateBtn">Generar y descargar PDF</button>
+  </div>
+</div>
+
+<!-- ======================= TAB: HOTELES ======================= -->
+<div class="tab-panel" id="panel-hoteles">
+
+  <div class="card">
+    <div class="toolbar">
+      <h2 style="margin:0;">Hoteles guardados</h2>
+      <div style="margin-left:auto;display:flex;gap:8px;">
+        <button class="btn secondary" id="exportHotelsBtn">Exportar JSON</button>
+        <label class="btn secondary" style="margin:0;">
+          Importar JSON
+          <input type="file" id="importHotelsInput" accept=".json" style="display:none;">
+        </label>
+      </div>
+    </div>
+    <div id="hotelsList"></div>
+  </div>
+
+  <div class="card" id="hotelForm">
+    <h2 id="hotelFormTitle">Nuevo hotel</h2>
+    <div class="grid2">
+      <div><label>Nombre del hotel</label><input type="text" id="hName" placeholder="Ej: agapo home"></div>
+      <div><label>Ciudad</label><input type="text" id="hCity" placeholder="Ej: Toledo"></div>
+    </div>
+    <div class="grid2">
+      <div><label>Dirección</label><input type="text" id="hStreet" placeholder="Ej: 6 Calle Cadena"></div>
+      <div><label>Código postal</label><input type="text" id="hPostal" placeholder="Ej: 45001"></div>
+    </div>
+    <div class="grid2">
+      <div><label>País (código)</label><input type="text" id="hCountry" placeholder="ES"></div>
+      <div><label>Teléfono</label><input type="text" id="hPhone" placeholder="+34 658 50 11 01"></div>
+    </div>
+    <div class="grid2">
+      <div><label>URL / ruta de la foto</label><input type="text" id="hPhoto" placeholder="assets/mi-foto.jpg"></div>
+      <div><label>Política de comidas</label>
+        <select id="hMeals">
+          <option value="equal">Desayunos = Cenas = noches</option>
+          <option value="dinner-minus-one">Cenas = noches - 1</option>
+        </select>
+      </div>
+    </div>
+    <div class="grid2">
+      <div><label>Horario de check-in</label><input type="text" id="hCheckin" placeholder="15:00 - 23:00"></div>
+      <div><label>Hora límite de check-out</label><input type="text" id="hCheckout" placeholder="11:00"></div>
+    </div>
+    <div class="grid2">
+      <div><label>Destino / pool de itinerario asociado</label><select id="hotelItinCity"></select></div>
+      <div><label>...o crea uno nuevo</label><input type="text" id="hItinNew" placeholder="Ej: Barcelona"></div>
+    </div>
+
+    <h3>Instalaciones</h3>
+    <div class="grid2">
+      <div><label>Internet</label><input type="text" id="aInternet"></div>
+      <div><label>Entretenimiento</label><input type="text" id="aEntretenimiento"></div>
+    </div>
+    <div class="grid2">
+      <div><label>Alimentos y bebidas</label><input type="text" id="aAlimentos"></div>
+      <div><label>Descanso</label><input type="text" id="aDescanso"></div>
+    </div>
+    <div class="grid2">
+      <div><label>Cuarto de baño</label><input type="text" id="aBano"></div>
+      <div><label>Facilidades de acceso para discapacitados</label><input type="text" id="aAcceso"></div>
+    </div>
+    <div class="grid2">
+      <div><label>Información práctica</label><input type="text" id="aInfoPractica"></div>
+      <div><label>Detalles prácticos</label><input type="text" id="aDetallesPracticos"></div>
+    </div>
+    <div class="grid2">
+      <div><label>Comodidades</label><input type="text" id="aComodidades"></div>
+      <div><label>Información importante</label><input type="text" id="aInfoImportante"></div>
+    </div>
+
+    <label>Requisitos para hacer el check-in (uno por línea)</label>
+    <textarea id="hRequisitos"></textarea>
+
+    <div class="toolbar">
+      <button class="btn" id="saveHotelBtn">Guardar hotel</button>
+      <button class="btn secondary" id="newHotelBtn">Limpiar / nuevo</button>
+    </div>
+  </div>
+</div>
+
+<!-- ======================= TAB: ITINERARIOS ======================= -->
+<div class="tab-panel" id="panel-itin">
+  <div class="card">
+    <div class="toolbar">
+      <h2 style="margin:0;">Destinos e itinerarios</h2>
+      <div style="margin-left:auto;display:flex;gap:8px;">
+        <button class="btn secondary" id="exportItinBtn">Exportar JSON</button>
+        <label class="btn secondary" style="margin:0;">
+          Importar JSON
+          <input type="file" id="importItinInput" accept=".json" style="display:none;">
+        </label>
+      </div>
+    </div>
+
+    <div class="grid3" style="align-items:end;">
+      <div><label>Destino</label><select id="itinCitySelect"></select></div>
+      <div><label>Nuevo destino</label><input type="text" id="newCityName" placeholder="Ej: Barcelona"></div>
+      <div style="display:flex;gap:8px;">
+        <button class="btn secondary" id="addCityBtn">Crear destino</button>
+        <button class="btn danger" id="deleteCityBtn">Eliminar destino</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Actividades del destino seleccionado</h3>
+    <p class="muted">Estas actividades se repartirán automáticamente entre los días libres de la estadía (mínimo un día de por medio), dejando siempre el primer y último día del recorrido como traslado.</p>
+    <div id="itinActivities"></div>
+
+    <h3 style="margin-top:22px;">Agregar actividad</h3>
+    <label>Título corto</label>
+    <input type="text" id="actTitulo" placeholder="Ej: Tour del Bernabéu">
+    <label>Descripción (usa **texto** para negrita)</label>
+    <textarea id="actCuerpo" placeholder="Descripción completa de la actividad..."></textarea>
+    <button class="btn secondary" id="addActivityBtn">+ Agregar actividad</button>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<!-- visible overlay used to build the pixel-accurate document before exporting to PDF
+     (html2canvas needs the element to be genuinely rendered on screen, not hidden via
+     off-screen positioning, or it can capture it with zero height) -->
+<div id="pdf-overlay">
+  <div class="pdf-overlay-bar"><div class="spinner"></div> <span id="pdf-overlay-msg">Generando documento...</span></div>
+  <div id="pdf-render-root"></div>
+</div>
+
+<script src="vendor/html2pdf.bundle.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

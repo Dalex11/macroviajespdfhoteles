@@ -1,0 +1,38 @@
+{
+  "Toledo / Madrid": [
+    {
+      "titulo": "Recorrido por la ciudad - La Mancha",
+      "cuerpo": "Recorrido por la ciudad. En busca de Don Quijote de La Mancha literatura: La Mancha. Se sitúa cerca de la ciudad de Toledo y es el escenario de las aventuras de Don Quijote, personaje al que dio vida Miguel de Cervantes. A lo largo del viaje, contemplaremos extensas llanuras y pequeñas sierras donde se sitúan uno de los símbolos de esta tierra: los molinos de viento manchegos. En esta ruta descubriremos una de las zonas de España más famosas."
+    },
+    {
+      "titulo": "Parque del Retiro",
+      "cuerpo": "Salida programada de la recepción del Hotel 10:00 am.\nEl parque del Retiro o parque del Buen Retiro, popularmente conocido como El Retiro, es un jardín histórico y parque público situado en Madrid (España). Considerado como una de las principales atracciones turísticas de la ciudad, alberga numerosos conjuntos arquitectónicos, escultóricos y paisajísticos de los siglos XVII a XXI."
+    },
+    {
+      "titulo": "Atardecer en el Parque Europa",
+      "cuerpo": "En la tarde disfruta del atardecer en todos los rincones de Europa salida desde la recepción del hotel 1:30 pm. El Parque Europa es la mayor zona verde y de ocio de Torrejón de Ardoz. Se extiende sobre una superficie de 233.000 metros cuadrados, situada entre el barrio de Torre nieve y la Ronda Sur y cuenta con las reproducciones de los más emblemáticos monumentos de las principales ciudades europeas, así como de diferentes zonas de ocio y multiaventura y una fuente cibernética inédita en toda Europa que realizará un gran espectáculo de agua, luz y sonido."
+    },
+    {
+      "titulo": "Tour del Bernabéu",
+      "cuerpo": "El **Tour del Bernabéu** es una de las visitas imprescindibles para todo visitante de Madrid. La entrada al **Tour del Real Madrid** permite recorrer sin prisas todo el Estadio del Real Madrid y sentir los lugares míticos: Mirar el césped desde el túnel de vestuarios como **Cristiano Ronaldo o Sergio Ramos,** sentarse en el banquillo como **Zidane**, pisar el terreno de juego o verlo desde el palco presidencial. Además incluye la visita al nuevo **Museo del Real Madrid,** que expone todos los trofeos que han hecho del Real Madrid el Mejor Club del Siglo XX y los que lleva ganados en lo que va de Siglo XXI, incluyendo la **Copa** y la **Supercopa de Europa** 2016."
+    },
+    {
+      "titulo": "Monasterio de El Escorial y Malasaña",
+      "cuerpo": "Sumérgete en la historia de España con una visita al imponente **Monasterio de El Escorial**, declarado Patrimonio de la Humanidad por la UNESCO. Esta majestuosa construcción del siglo XVI combina funciones de palacio, basílica, mausoleo, biblioteca y monasterio. La visita incluye recorridos por los aposentos reales, el Panteón de los Reyes y la Biblioteca Real, considerada una de las más bellas del mundo.\nEn la tarde, regreso a Madrid para un recorrido libre por el tradicional **barrio de Malasaña**, cuna de la movida madrileña. Disfruta de sus calles coloridas, tiendas alternativas y una amplia oferta de cafés y bares con identidad única."
+    },
+    {
+      "titulo": "Museo del Prado y cena de despedida",
+      "cuerpo": "Disfruta de una jornada especial recorriendo el famoso **Museo del Prado**, una de las pinacotecas más importantes del mundo. Admira obras maestras de Velázquez, Goya, El Bosco y Rubens.\nA mediodía, breve caminata por el **Paseo del Arte** y tiempo libre para compras de última hora o para disfrutar de un café en alguna de las terrazas madrileñas.\nEn la noche, **cena de despedida** en un restaurante típico madrileño con espectáculo de flamenco en vivo. Una experiencia inolvidable para cerrar con broche de oro esta travesía por Europa."
+    }
+  ],
+  "Valencia": [
+    {
+      "titulo": "Ciudad de las Artes y las Ciencias",
+      "cuerpo": "Visita a la ciudad de las artes y las ciencias. Salida 8:00 AM desde el Hotel.\nDescubra la interesante Ciudad de las Artes y las Ciencias, la parte más moderna de Valencia. El billete combinado le permite conocer varios de sus edificios como el Museo de la Ciencia Príncipe Felipe o el Oceanográfica, así como una visita guiada a lo largo de todo el complejo, visitando la espectacular ciudad creada por Santiago Calatrava y la función de cada uno de los edificios."
+    },
+    {
+      "titulo": "Recorrido en autobús por la ciudad",
+      "cuerpo": "Recorrido en autobús por la ciudad.\nEn la costa del Mediterráneo, Valencia es una ciudad moderna con una rica historia gótica y romana. Explore la ciudad a su propio ritmo en una excursión en autobús turístico con paradas libres. Viaje entre las dos rutas en un autobús de dos pisos con techo descubierto, pudiendo subir y bajar cuando quiera. Esta excursión turística le ofrece 17 paradas por toda la ciudad, así que, si lo desea, puede ver lugares de interés como el Palacio San Pio V o la Catedral de Valencia."
+    }
+  ]
+}
