@@ -264,3 +264,15 @@ table.simple th{background:#f4f4f4;}
 .doc-footer img.footcurve{
   position:absolute;left:0;bottom:0;height:96px;width:100%;object-fit:cover;z-index:0;
 }
+
+/* ===================== FLIGHT DOCUMENT ===================== */
+.doc-route{display:flex;align-items:center;gap:18px;}
+.doc-route .doc-route-pt{flex:1;}
+.doc-route .doc-route-code{font-size:26px;font-weight:800;color:var(--text-dark);letter-spacing:.5px;}
+.doc-route .doc-route-city{font-size:12px;color:var(--text-gray);margin-top:2px;}
+.doc-route .doc-route-arrow{font-size:20px;color:var(--orange);flex:0 0 auto;font-weight:700;}
+.doc-baglist{list-style:none;margin:0 0 10px;padding:0;display:flex;flex-wrap:wrap;gap:8px;}
+.doc-baglist li{background:var(--gray-bg);padding:6px 12px;border-radius:20px;font-size:12px;font-weight:600;}
+.doc-flight-table{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:4px;}
+.doc-flight-table th,.doc-flight-table td{border:1px solid #e2e2e2;padding:7px 10px;text-align:left;}
+.doc-flight-table th{background:var(--gray-bg);font-weight:700;}

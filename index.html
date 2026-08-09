@@ -13,8 +13,7 @@
   <h1>Generador de documentos de reserva</h1>
   <div class="tabs">
     <button class="tab-btn active" data-tab="generar">Generar documento</button>
-    <button class="tab-btn" data-tab="hoteles">Hoteles</button>
-    <button class="tab-btn" data-tab="itin">Itinerarios</button>
+    <button class="tab-btn" data-tab="vuelos">Vuelos</button>
   </div>
 </div>
 
@@ -43,6 +42,33 @@
 
   <div class="card" style="text-align:center;">
     <button class="btn big" id="generateBtn">Generar y descargar PDF</button>
+  </div>
+</div>
+
+<!-- ======================= TAB: VUELOS ======================= -->
+<div class="tab-panel" id="panel-vuelos">
+
+  <div class="hint">
+    Agrega un trayecto por cada vuelo del itinerario (en el orden en que se vuela). El número de avión va sin el código
+    de aerolínea: por ejemplo, para Avianca AV 9525 solo escribe <b>9525</b>, el <b>AV</b> se agrega solo. Los campos
+    marcados como opcionales no aparecerán en el documento si los dejas vacíos.
+  </div>
+
+  <div class="card">
+    <h2>1. Pasajeros del vuelo</h2>
+    <p class="muted">Escribe el nombre exactamente como debe salir en el tiquete (por ejemplo, tal como lo entrega la aerolínea).</p>
+    <div id="flightPassengersBox"></div>
+    <button class="btn secondary" id="addFlightPassengerBtn">+ Agregar pasajero</button>
+  </div>
+
+  <div class="card">
+    <h2>2. Trayectos</h2>
+    <div id="flightLegsBox"></div>
+    <button class="btn secondary" id="addFlightLegBtn">+ Agregar trayecto</button>
+  </div>
+
+  <div class="card" style="text-align:center;">
+    <button class="btn big" id="generateFlightBtn">Generar tiquete</button>
   </div>
 </div>
 

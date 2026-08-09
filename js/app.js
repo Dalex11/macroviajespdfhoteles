@@ -913,6 +913,709 @@ async function onGenerateClick(){
 }
 
 /* =========================================================================
+   UI: Vuelos tab
+   ========================================================================= */
+const AIRLINES = [
+  { name:'Avianca',    code:'AV' },
+  { name:'LATAM',      code:'LA' },
+  { name:'Air Europa', code:'UX' },
+  { name:'Wingo',      code:'P5' },
+  { name:'JetSmart',   code:'JA' },
+  { name:'World2Fly',  code:'2W' },
+  { name:'SATENA',     code:'9R' },
+  { name:'Clic Air',   code:'VE' }
+];
+
+/* Base de aeropuertos: Colombia y España completos, principales de EE.UU.,
+   México, Ecuador, Chile, Cuba, Francia, Alemania, Reino Unido, Portugal,
+   resto de la Unión Europea y resto de América Latina. Agrupados por país
+   y ordenados alfabéticamente dentro de cada país. */
+const AIRPORTS = [
+  // ------------------------- Colombia -------------------------
+  { code:'ADZ', city:'San Andrés', country:'Colombia', tz:'America/Bogota' },
+  { code:'APO', city:'Apartadó', country:'Colombia', tz:'America/Bogota' },
+  { code:'BAQ', city:'Barranquilla', country:'Colombia', tz:'America/Bogota' },
+  { code:'BGA', city:'Bucaramanga', country:'Colombia', tz:'America/Bogota' },
+  { code:'BOG', city:'Bogotá', country:'Colombia', tz:'America/Bogota' },
+  { code:'CLO', city:'Cali', country:'Colombia', tz:'America/Bogota' },
+  { code:'CTG', city:'Cartagena', country:'Colombia', tz:'America/Bogota' },
+  { code:'CUC', city:'Cúcuta', country:'Colombia', tz:'America/Bogota' },
+  { code:'CZU', city:'Corozal / Sincelejo', country:'Colombia', tz:'America/Bogota' },
+  { code:'EJA', city:'Barrancabermeja', country:'Colombia', tz:'America/Bogota' },
+  { code:'EOH', city:'Medellín (Olaya Herrera)', country:'Colombia', tz:'America/Bogota' },
+  { code:'EYP', city:'Yopal', country:'Colombia', tz:'America/Bogota' },
+  { code:'FLA', city:'Florencia', country:'Colombia', tz:'America/Bogota' },
+  { code:'IBE', city:'Ibagué', country:'Colombia', tz:'America/Bogota' },
+  { code:'LET', city:'Leticia', country:'Colombia', tz:'America/Bogota' },
+  { code:'MDE', city:'Medellín (Rionegro)', country:'Colombia', tz:'America/Bogota' },
+  { code:'MTR', city:'Montería', country:'Colombia', tz:'America/Bogota' },
+  { code:'MZL', city:'Manizales', country:'Colombia', tz:'America/Bogota' },
+  { code:'NVA', city:'Neiva', country:'Colombia', tz:'America/Bogota' },
+  { code:'PEI', city:'Pereira', country:'Colombia', tz:'America/Bogota' },
+  { code:'PPN', city:'Popayán', country:'Colombia', tz:'America/Bogota' },
+  { code:'PSO', city:'Pasto', country:'Colombia', tz:'America/Bogota' },
+  { code:'PVA', city:'Providencia', country:'Colombia', tz:'America/Bogota' },
+  { code:'RCH', city:'Riohacha', country:'Colombia', tz:'America/Bogota' },
+  { code:'SJE', city:'San José del Guaviare', country:'Colombia', tz:'America/Bogota' },
+  { code:'SMR', city:'Santa Marta', country:'Colombia', tz:'America/Bogota' },
+  { code:'TCO', city:'Tumaco', country:'Colombia', tz:'America/Bogota' },
+  { code:'UIB', city:'Quibdó', country:'Colombia', tz:'America/Bogota' },
+  { code:'VUP', city:'Valledupar', country:'Colombia', tz:'America/Bogota' },
+  { code:'VVC', city:'Villavicencio', country:'Colombia', tz:'America/Bogota' },
+
+  // ------------------------- España -------------------------
+  { code:'ABC', city:'Albacete', country:'España', tz:'Europe/Madrid' },
+  { code:'ACE', city:'Lanzarote', country:'España', tz:'Atlantic/Canary' },
+  { code:'AGP', city:'Málaga', country:'España', tz:'Europe/Madrid' },
+  { code:'ALC', city:'Alicante-Elche', country:'España', tz:'Europe/Madrid' },
+  { code:'BCN', city:'Barcelona', country:'España', tz:'Europe/Madrid' },
+  { code:'BIO', city:'Bilbao', country:'España', tz:'Europe/Madrid' },
+  { code:'BJZ', city:'Badajoz', country:'España', tz:'Europe/Madrid' },
+  { code:'EAS', city:'San Sebastián', country:'España', tz:'Europe/Madrid' },
+  { code:'FUE', city:'Fuerteventura', country:'España', tz:'Atlantic/Canary' },
+  { code:'GMZ', city:'La Gomera', country:'España', tz:'Atlantic/Canary' },
+  { code:'GRO', city:'Girona', country:'España', tz:'Europe/Madrid' },
+  { code:'GRX', city:'Granada', country:'España', tz:'Europe/Madrid' },
+  { code:'IBZ', city:'Ibiza', country:'España', tz:'Europe/Madrid' },
+  { code:'LCG', city:'A Coruña', country:'España', tz:'Europe/Madrid' },
+  { code:'LEI', city:'Almería', country:'España', tz:'Europe/Madrid' },
+  { code:'LEN', city:'León', country:'España', tz:'Europe/Madrid' },
+  { code:'LPA', city:'Las Palmas de Gran Canaria', country:'España', tz:'Atlantic/Canary' },
+  { code:'MAD', city:'Madrid (Barajas)', country:'España', tz:'Europe/Madrid' },
+  { code:'MAH', city:'Menorca', country:'España', tz:'Europe/Madrid' },
+  { code:'MLN', city:'Melilla', country:'España', tz:'Europe/Madrid' },
+  { code:'ODB', city:'Córdoba', country:'España', tz:'Europe/Madrid' },
+  { code:'OVD', city:'Asturias', country:'España', tz:'Europe/Madrid' },
+  { code:'PMI', city:'Palma de Mallorca', country:'España', tz:'Europe/Madrid' },
+  { code:'PNA', city:'Pamplona', country:'España', tz:'Europe/Madrid' },
+  { code:'REU', city:'Reus', country:'España', tz:'Europe/Madrid' },
+  { code:'RMU', city:'Región de Murcia (Corvera)', country:'España', tz:'Europe/Madrid' },
+  { code:'SCQ', city:'Santiago de Compostela', country:'España', tz:'Europe/Madrid' },
+  { code:'SDR', city:'Santander', country:'España', tz:'Europe/Madrid' },
+  { code:'SLM', city:'Salamanca', country:'España', tz:'Europe/Madrid' },
+  { code:'SPC', city:'La Palma', country:'España', tz:'Atlantic/Canary' },
+  { code:'SVQ', city:'Sevilla', country:'España', tz:'Europe/Madrid' },
+  { code:'TFN', city:'Tenerife Norte', country:'España', tz:'Atlantic/Canary' },
+  { code:'TFS', city:'Tenerife Sur', country:'España', tz:'Atlantic/Canary' },
+  { code:'VDE', city:'El Hierro', country:'España', tz:'Atlantic/Canary' },
+  { code:'VGO', city:'Vigo', country:'España', tz:'Europe/Madrid' },
+  { code:'VLC', city:'Valencia', country:'España', tz:'Europe/Madrid' },
+  { code:'VLL', city:'Valladolid', country:'España', tz:'Europe/Madrid' },
+  { code:'XRY', city:'Jerez de la Frontera', country:'España', tz:'Europe/Madrid' },
+  { code:'ZAZ', city:'Zaragoza', country:'España', tz:'Europe/Madrid' },
+
+  // --------------------- Estados Unidos (principales) ---------------------
+  { code:'ATL', city:'Atlanta', country:'Estados Unidos', tz:'America/New_York' },
+  { code:'AUS', city:'Austin', country:'Estados Unidos', tz:'America/Chicago' },
+  { code:'BOS', city:'Boston', country:'Estados Unidos', tz:'America/New_York' },
+  { code:'CLT', city:'Charlotte', country:'Estados Unidos', tz:'America/New_York' },
+  { code:'DCA', city:'Washington (Reagan)', country:'Estados Unidos', tz:'America/New_York' },
+  { code:'DEN', city:'Denver', country:'Estados Unidos', tz:'America/Denver' },
+  { code:'DFW', city:'Dallas/Fort Worth', country:'Estados Unidos', tz:'America/Chicago' },
+  { code:'DTW', city:'Detroit', country:'Estados Unidos', tz:'America/New_York' },
+  { code:'EWR', city:'Nueva York (Newark)', country:'Estados Unidos', tz:'America/New_York' },
+  { code:'FLL', city:'Fort Lauderdale', country:'Estados Unidos', tz:'America/New_York' },
+  { code:'HNL', city:'Honolulu', country:'Estados Unidos', tz:'Pacific/Honolulu' },
+  { code:'IAD', city:'Washington (Dulles)', country:'Estados Unidos', tz:'America/New_York' },
+  { code:'IAH', city:'Houston', country:'Estados Unidos', tz:'America/Chicago' },
+  { code:'JFK', city:'Nueva York (JFK)', country:'Estados Unidos', tz:'America/New_York' },
+  { code:'LAS', city:'Las Vegas', country:'Estados Unidos', tz:'America/Los_Angeles' },
+  { code:'LAX', city:'Los Ángeles', country:'Estados Unidos', tz:'America/Los_Angeles' },
+  { code:'LGA', city:'Nueva York (LaGuardia)', country:'Estados Unidos', tz:'America/New_York' },
+  { code:'MCO', city:'Orlando', country:'Estados Unidos', tz:'America/New_York' },
+  { code:'MIA', city:'Miami', country:'Estados Unidos', tz:'America/New_York' },
+  { code:'MSP', city:'Minneapolis', country:'Estados Unidos', tz:'America/Chicago' },
+  { code:'ORD', city:'Chicago (O\u2019Hare)', country:'Estados Unidos', tz:'America/Chicago' },
+  { code:'PHL', city:'Filadelfia', country:'Estados Unidos', tz:'America/New_York' },
+  { code:'PHX', city:'Phoenix', country:'Estados Unidos', tz:'America/Phoenix' },
+  { code:'SAN', city:'San Diego', country:'Estados Unidos', tz:'America/Los_Angeles' },
+  { code:'SEA', city:'Seattle', country:'Estados Unidos', tz:'America/Los_Angeles' },
+  { code:'SFO', city:'San Francisco', country:'Estados Unidos', tz:'America/Los_Angeles' },
+  { code:'SJU', city:'San Juan (Puerto Rico)', country:'Estados Unidos', tz:'America/Puerto_Rico' },
+  { code:'TPA', city:'Tampa', country:'Estados Unidos', tz:'America/New_York' },
+
+  // --------------------------- México (principales) ---------------------------
+  { code:'ACA', city:'Acapulco', country:'México', tz:'America/Mexico_City' },
+  { code:'BJX', city:'León / Guanajuato (Bajío)', country:'México', tz:'America/Mexico_City' },
+  { code:'CJS', city:'Ciudad Juárez', country:'México', tz:'America/Ojinaga' },
+  { code:'CUL', city:'Culiacán', country:'México', tz:'America/Mazatlan' },
+  { code:'CUN', city:'Cancún', country:'México', tz:'America/Cancun' },
+  { code:'CZM', city:'Cozumel', country:'México', tz:'America/Cancun' },
+  { code:'GDL', city:'Guadalajara', country:'México', tz:'America/Mexico_City' },
+  { code:'HMO', city:'Hermosillo', country:'México', tz:'America/Hermosillo' },
+  { code:'MEX', city:'Ciudad de México (Benito Juárez)', country:'México', tz:'America/Mexico_City' },
+  { code:'MID', city:'Mérida', country:'México', tz:'America/Mexico_City' },
+  { code:'MTY', city:'Monterrey', country:'México', tz:'America/Monterrey' },
+  { code:'NLU', city:'Ciudad de México (Felipe Ángeles)', country:'México', tz:'America/Mexico_City' },
+  { code:'OAX', city:'Oaxaca', country:'México', tz:'America/Mexico_City' },
+  { code:'PVR', city:'Puerto Vallarta', country:'México', tz:'America/Bahia_Banderas' },
+  { code:'QRO', city:'Querétaro', country:'México', tz:'America/Mexico_City' },
+  { code:'SJD', city:'Los Cabos', country:'México', tz:'America/Mazatlan' },
+  { code:'SLW', city:'Saltillo', country:'México', tz:'America/Monterrey' },
+  { code:'TGZ', city:'Tuxtla Gutiérrez', country:'México', tz:'America/Mexico_City' },
+  { code:'TIJ', city:'Tijuana', country:'México', tz:'America/Tijuana' },
+  { code:'VER', city:'Veracruz', country:'México', tz:'America/Mexico_City' },
+  { code:'ZIH', city:'Ixtapa / Zihuatanejo', country:'México', tz:'America/Mexico_City' },
+  { code:'ZLO', city:'Manzanillo', country:'México', tz:'America/Mexico_City' },
+
+  // ------------------------------ Ecuador ------------------------------
+  { code:'CUE', city:'Cuenca', country:'Ecuador', tz:'America/Guayaquil' },
+  { code:'GPS', city:'Galápagos (Baltra)', country:'Ecuador', tz:'Pacific/Galapagos' },
+  { code:'GYE', city:'Guayaquil', country:'Ecuador', tz:'America/Guayaquil' },
+  { code:'MEC', city:'Manta', country:'Ecuador', tz:'America/Guayaquil' },
+  { code:'SNC', city:'San Cristóbal (Galápagos)', country:'Ecuador', tz:'Pacific/Galapagos' },
+  { code:'UIO', city:'Quito', country:'Ecuador', tz:'America/Guayaquil' },
+
+  // ------------------------------- Chile -------------------------------
+  { code:'ANF', city:'Antofagasta', country:'Chile', tz:'America/Santiago' },
+  { code:'CJC', city:'Calama (San Pedro de Atacama)', country:'Chile', tz:'America/Santiago' },
+  { code:'IPC', city:'Isla de Pascua', country:'Chile', tz:'Pacific/Easter' },
+  { code:'IQQ', city:'Iquique', country:'Chile', tz:'America/Santiago' },
+  { code:'LSC', city:'La Serena', country:'Chile', tz:'America/Santiago' },
+  { code:'PMC', city:'Puerto Montt', country:'Chile', tz:'America/Santiago' },
+  { code:'PUQ', city:'Punta Arenas', country:'Chile', tz:'America/Santiago' },
+  { code:'SCL', city:'Santiago', country:'Chile', tz:'America/Santiago' },
+  { code:'ZAL', city:'Valdivia', country:'Chile', tz:'America/Santiago' },
+
+  // -------------------------------- Cuba --------------------------------
+  { code:'CFG', city:'Cienfuegos', country:'Cuba', tz:'America/Havana' },
+  { code:'CMW', city:'Camagüey', country:'Cuba', tz:'America/Havana' },
+  { code:'CYO', city:'Cayo Coco', country:'Cuba', tz:'America/Havana' },
+  { code:'HAV', city:'La Habana', country:'Cuba', tz:'America/Havana' },
+  { code:'HOG', city:'Holguín', country:'Cuba', tz:'America/Havana' },
+  { code:'LCL', city:'Cayo Largo', country:'Cuba', tz:'America/Havana' },
+  { code:'MZO', city:'Manzanillo', country:'Cuba', tz:'America/Havana' },
+  { code:'SCU', city:'Santiago de Cuba', country:'Cuba', tz:'America/Havana' },
+  { code:'SNU', city:'Santa Clara', country:'Cuba', tz:'America/Havana' },
+  { code:'VRA', city:'Varadero', country:'Cuba', tz:'America/Havana' },
+
+  // ------------------------------ Francia ------------------------------
+  { code:'BIQ', city:'Biarritz', country:'Francia', tz:'Europe/Paris' },
+  { code:'BOD', city:'Burdeos', country:'Francia', tz:'Europe/Paris' },
+  { code:'CDG', city:'París (Charles de Gaulle)', country:'Francia', tz:'Europe/Paris' },
+  { code:'LYS', city:'Lyon', country:'Francia', tz:'Europe/Paris' },
+  { code:'MRS', city:'Marsella', country:'Francia', tz:'Europe/Paris' },
+  { code:'NCE', city:'Niza', country:'Francia', tz:'Europe/Paris' },
+  { code:'NTE', city:'Nantes', country:'Francia', tz:'Europe/Paris' },
+  { code:'ORY', city:'París (Orly)', country:'Francia', tz:'Europe/Paris' },
+  { code:'SXB', city:'Estrasburgo', country:'Francia', tz:'Europe/Paris' },
+  { code:'TLS', city:'Toulouse', country:'Francia', tz:'Europe/Paris' },
+
+  // ------------------------------ Alemania ------------------------------
+  { code:'BER', city:'Berlín', country:'Alemania', tz:'Europe/Berlin' },
+  { code:'CGN', city:'Colonia/Bonn', country:'Alemania', tz:'Europe/Berlin' },
+  { code:'DUS', city:'Düsseldorf', country:'Alemania', tz:'Europe/Berlin' },
+  { code:'FRA', city:'Fráncfort', country:'Alemania', tz:'Europe/Berlin' },
+  { code:'HAJ', city:'Hannover', country:'Alemania', tz:'Europe/Berlin' },
+  { code:'HAM', city:'Hamburgo', country:'Alemania', tz:'Europe/Berlin' },
+  { code:'LEJ', city:'Leipzig', country:'Alemania', tz:'Europe/Berlin' },
+  { code:'MUC', city:'Múnich', country:'Alemania', tz:'Europe/Berlin' },
+  { code:'NUE', city:'Núremberg', country:'Alemania', tz:'Europe/Berlin' },
+  { code:'STR', city:'Stuttgart', country:'Alemania', tz:'Europe/Berlin' },
+
+  // ---------------------------- Reino Unido ----------------------------
+  { code:'BHX', city:'Birmingham', country:'Reino Unido', tz:'Europe/London' },
+  { code:'BRS', city:'Bristol', country:'Reino Unido', tz:'Europe/London' },
+  { code:'EDI', city:'Edimburgo', country:'Reino Unido', tz:'Europe/London' },
+  { code:'GLA', city:'Glasgow', country:'Reino Unido', tz:'Europe/London' },
+  { code:'LGW', city:'Londres (Gatwick)', country:'Reino Unido', tz:'Europe/London' },
+  { code:'LHR', city:'Londres (Heathrow)', country:'Reino Unido', tz:'Europe/London' },
+  { code:'LPL', city:'Liverpool', country:'Reino Unido', tz:'Europe/London' },
+  { code:'LTN', city:'Londres (Luton)', country:'Reino Unido', tz:'Europe/London' },
+  { code:'MAN', city:'Mánchester', country:'Reino Unido', tz:'Europe/London' },
+  { code:'STN', city:'Londres (Stansted)', country:'Reino Unido', tz:'Europe/London' },
+
+  // ------------------------------ Portugal ------------------------------
+  { code:'FAO', city:'Faro', country:'Portugal', tz:'Europe/Lisbon' },
+  { code:'FNC', city:'Madeira (Funchal)', country:'Portugal', tz:'Atlantic/Madeira' },
+  { code:'LIS', city:'Lisboa', country:'Portugal', tz:'Europe/Lisbon' },
+  { code:'OPO', city:'Oporto', country:'Portugal', tz:'Europe/Lisbon' },
+  { code:'PDL', city:'Azores (Ponta Delgada)', country:'Portugal', tz:'Atlantic/Azores' },
+  { code:'PXO', city:'Porto Santo', country:'Portugal', tz:'Atlantic/Madeira' },
+
+  // ------------------------ Unión Europea (otros) ------------------------
+  { code:'AMS', city:'Ámsterdam', country:'Unión Europea (otros)', tz:'Europe/Amsterdam' },
+  { code:'ARN', city:'Estocolmo', country:'Unión Europea (otros)', tz:'Europe/Stockholm' },
+  { code:'ATH', city:'Atenas', country:'Unión Europea (otros)', tz:'Europe/Athens' },
+  { code:'BRU', city:'Bruselas', country:'Unión Europea (otros)', tz:'Europe/Brussels' },
+  { code:'BUD', city:'Budapest', country:'Unión Europea (otros)', tz:'Europe/Budapest' },
+  { code:'CPH', city:'Copenhague', country:'Unión Europea (otros)', tz:'Europe/Copenhagen' },
+  { code:'DUB', city:'Dublín', country:'Unión Europea (otros)', tz:'Europe/Dublin' },
+  { code:'FCO', city:'Roma (Fiumicino)', country:'Unión Europea (otros)', tz:'Europe/Rome' },
+  { code:'MXP', city:'Milán (Malpensa)', country:'Unión Europea (otros)', tz:'Europe/Rome' },
+  { code:'NAP', city:'Nápoles', country:'Unión Europea (otros)', tz:'Europe/Rome' },
+  { code:'PRG', city:'Praga', country:'Unión Europea (otros)', tz:'Europe/Prague' },
+  { code:'VCE', city:'Venecia', country:'Unión Europea (otros)', tz:'Europe/Rome' },
+  { code:'VIE', city:'Viena', country:'Unión Europea (otros)', tz:'Europe/Vienna' },
+  { code:'WAW', city:'Varsovia', country:'Unión Europea (otros)', tz:'Europe/Warsaw' },
+
+  // ------------------------ América Latina (otros) ------------------------
+  { code:'AEP', city:'Buenos Aires (Aeroparque)', country:'América Latina (otros)', tz:'America/Argentina/Buenos_Aires' },
+  { code:'AQP', city:'Arequipa', country:'América Latina (otros)', tz:'America/Lima' },
+  { code:'ASU', city:'Asunción', country:'América Latina (otros)', tz:'America/Asuncion' },
+  { code:'BSB', city:'Brasilia', country:'América Latina (otros)', tz:'America/Sao_Paulo' },
+  { code:'CCS', city:'Caracas', country:'América Latina (otros)', tz:'America/Caracas' },
+  { code:'CNF', city:'Belo Horizonte', country:'América Latina (otros)', tz:'America/Sao_Paulo' },
+  { code:'COR', city:'Córdoba (Argentina)', country:'América Latina (otros)', tz:'America/Argentina/Buenos_Aires' },
+  { code:'CUZ', city:'Cusco', country:'América Latina (otros)', tz:'America/Lima' },
+  { code:'EZE', city:'Buenos Aires (Ezeiza)', country:'América Latina (otros)', tz:'America/Argentina/Buenos_Aires' },
+  { code:'GIG', city:'Río de Janeiro (Galeão)', country:'América Latina (otros)', tz:'America/Sao_Paulo' },
+  { code:'GRU', city:'São Paulo (Guarulhos)', country:'América Latina (otros)', tz:'America/Sao_Paulo' },
+  { code:'GUA', city:'Ciudad de Guatemala', country:'América Latina (otros)', tz:'America/Guatemala' },
+  { code:'LIM', city:'Lima', country:'América Latina (otros)', tz:'America/Lima' },
+  { code:'LPB', city:'La Paz', country:'América Latina (otros)', tz:'America/La_Paz' },
+  { code:'MDZ', city:'Mendoza', country:'América Latina (otros)', tz:'America/Argentina/Buenos_Aires' },
+  { code:'MGA', city:'Managua', country:'América Latina (otros)', tz:'America/Managua' },
+  { code:'MVD', city:'Montevideo', country:'América Latina (otros)', tz:'America/Montevideo' },
+  { code:'PTY', city:'Panamá (Tocumen)', country:'América Latina (otros)', tz:'America/Panama' },
+  { code:'PUJ', city:'Punta Cana', country:'América Latina (otros)', tz:'America/Santo_Domingo' },
+  { code:'REC', city:'Recife', country:'América Latina (otros)', tz:'America/Sao_Paulo' },
+  { code:'SAL', city:'San Salvador', country:'América Latina (otros)', tz:'America/El_Salvador' },
+  { code:'SAP', city:'San Pedro Sula', country:'América Latina (otros)', tz:'America/Tegucigalpa' },
+  { code:'SDQ', city:'Santo Domingo', country:'América Latina (otros)', tz:'America/Santo_Domingo' },
+  { code:'SJO', city:'San José (Costa Rica)', country:'América Latina (otros)', tz:'America/Costa_Rica' },
+  { code:'SSA', city:'Salvador de Bahía', country:'América Latina (otros)', tz:'America/Sao_Paulo' },
+  { code:'TGU', city:'Tegucigalpa', country:'América Latina (otros)', tz:'America/Tegucigalpa' },
+  { code:'VLN', city:'Valencia (Venezuela)', country:'América Latina (otros)', tz:'America/Caracas' },
+  { code:'VVI', city:'Santa Cruz de la Sierra', country:'América Latina (otros)', tz:'America/La_Paz' }
+];
+
+function airportOptionsHTML(){
+  const byCountry = {};
+  AIRPORTS.forEach(a=>{
+    if(!byCountry[a.country]) byCountry[a.country] = [];
+    byCountry[a.country].push(a);
+  });
+  const countries = Object.keys(byCountry).sort((a,b)=>a.localeCompare(b,'es'));
+  return countries.map(country=>{
+    const airports = byCountry[country].slice().sort((a,b)=>a.city.localeCompare(b.city,'es'));
+    const opts = airports.map(a=>`<option value="${a.code}">${a.city} (${a.code})</option>`).join('');
+    return `<optgroup label="${country}">${opts}</optgroup>`;
+  }).join('');
+}
+function airportByCode(code){
+  return AIRPORTS.find(a=>a.code===code);
+}
+
+/* Duración de vuelo calculada correctamente cruzando husos horarios: convierte
+   la hora local de salida (en el huso del aeropuerto de origen) y la hora local
+   de llegada (en el huso del aeropuerto de destino) a un mismo instante UTC. */
+function zoneOffsetMinutes(date, timeZone){
+  const dtf = new Intl.DateTimeFormat('en-US', { timeZone, timeZoneName:'shortOffset' });
+  const part = dtf.formatToParts(date).find(p=>p.type==='timeZoneName');
+  if(!part) return 0;
+  const m = part.value.match(/GMT([+-]\d+)(?::(\d+))?/);
+  if(!m) return 0;
+  const h = parseInt(m[1],10);
+  const mi = m[2] ? parseInt(m[2],10) : 0;
+  return (h<0 ? -1 : 1) * (Math.abs(h)*60 + mi);
+}
+function wallTimeToUTCms(y, mo, d, h, mi, timeZone){
+  const guess = Date.UTC(y, mo-1, d, h, mi);
+  const offsetMin = zoneOffsetMinutes(new Date(guess), timeZone);
+  return guess - offsetMin*60000;
+}
+function computeFlightDurationMinutes(leg){
+  if(!leg.orig?.tz || !leg.dest?.tz) return null;
+  const dep = leg.depart, arr = leg.arrive;
+  const departUTC = wallTimeToUTCms(dep.getFullYear(), dep.getMonth()+1, dep.getDate(), dep.getHours(), dep.getMinutes(), leg.orig.tz);
+  const arriveUTC = wallTimeToUTCms(arr.getFullYear(), arr.getMonth()+1, arr.getDate(), arr.getHours(), arr.getMinutes(), leg.dest.tz);
+  const minutes = Math.round((arriveUTC - departUTC)/60000);
+  return minutes>=0 ? minutes : null;
+}
+function fmtDuration(totalMinutes){
+  if(totalMinutes==null || isNaN(totalMinutes)) return '';
+  const h = Math.floor(totalMinutes/60), m = totalMinutes%60;
+  const parts = [];
+  if(h>0) parts.push(`${h} hora${h!==1?'s':''}`);
+  if(m>0) parts.push(`${m} minuto${m!==1?'s':''}`);
+  return parts.join(' ') || '0 minutos';
+}
+
+function fmtFlightDateTime(dt){
+  return `${DIAS[dt.getDay()]}, ${String(dt.getDate()).padStart(2,'0')} de ${MESES[dt.getMonth()]} de ${dt.getFullYear()} · ${String(dt.getHours()).padStart(2,'0')}:${String(dt.getMinutes()).padStart(2,'0')}`;
+}
+
+/* Clasificación y formato de pasajero: APELLIDOS/NOMBRE + código
+   INF (menor de 2 años), CHD (menor de 11 años), MR (hombre, 11+), MRS (mujer, 11+) */
+function passengerSuffix(edad, sexo){
+  if(edad < 2) return 'INF';
+  if(edad < 11) return 'CHD';
+  return sexo === 'F' ? 'MRS' : 'MR';
+}
+function passengerDisplayName(p){
+  return `${upper(p.apellidos)}/${upper(p.nombre)} ${passengerSuffix(p.edad, p.sexo)}`;
+}
+
+let flightPassengerRows = 1;
+let flightLegRows = 1;
+let flightPassengerCache = [];
+
+function renderFlightPassengerRows(){
+  const box = document.getElementById('flightPassengersBox');
+  box.innerHTML='';
+  for(let i=0;i<flightPassengerRows;i++){
+    box.insertAdjacentHTML('beforeend', `
+      <div class="row-item" id="fprow_${i}">
+        ${flightPassengerRows>1?`<button class="btn small danger remove-btn" onclick="removeFlightPassenger(${i})">Quitar</button>`:''}
+        <div class="grid2">
+          <div><label>Apellidos</label><input type="text" id="fpApellidos_${i}" placeholder="Ej: Vides Villalobos"></div>
+          <div><label>Nombre(s)</label><input type="text" id="fpNombre_${i}" placeholder="Ej: Hanna Sophia"></div>
+        </div>
+        <div class="grid2">
+          <div><label>Sexo</label>
+            <select id="fpSexo_${i}">
+              <option value="F">Femenino</option>
+              <option value="M">Masculino</option>
+            </select>
+          </div>
+          <div><label>Edad (años)</label><input type="number" id="fpEdad_${i}" min="0" max="110" placeholder="Ej: 5"></div>
+        </div>
+        <div class="grid2">
+          <div><label>Asiento (opcional)</label><input type="text" id="fpAsiento_${i}" placeholder="Ej: 12A"></div>
+          <div><label>Recibo de boleto electrónico (opcional)</label><input type="text" id="fpRecibo_${i}" placeholder="Ej: 1345230276952"></div>
+        </div>
+      </div>
+    `);
+  }
+}
+function addFlightPassenger(){ flightPassengerRows++; syncFlightPassengerValues(); renderFlightPassengerRows(); restoreFlightPassengerValues(); }
+function removeFlightPassenger(i){
+  syncFlightPassengerValues();
+  flightPassengerCache.splice(i,1);
+  flightPassengerRows--;
+  renderFlightPassengerRows();
+  restoreFlightPassengerValues();
+}
+function syncFlightPassengerValues(){
+  flightPassengerCache = [];
+  for(let i=0;i<flightPassengerRows;i++){
+    const ap = document.getElementById('fpApellidos_'+i);
+    if(!ap) continue;
+    flightPassengerCache.push({
+      apellidos: ap.value,
+      nombre: document.getElementById('fpNombre_'+i)?.value || '',
+      sexo: document.getElementById('fpSexo_'+i)?.value || 'F',
+      edad: document.getElementById('fpEdad_'+i)?.value || '',
+      asiento: document.getElementById('fpAsiento_'+i)?.value || '',
+      recibo: document.getElementById('fpRecibo_'+i)?.value || ''
+    });
+  }
+}
+function restoreFlightPassengerValues(){
+  flightPassengerCache.forEach((p,i)=>{
+    const ap = document.getElementById('fpApellidos_'+i);
+    if(!ap) return;
+    ap.value = p.apellidos;
+    document.getElementById('fpNombre_'+i).value = p.nombre;
+    document.getElementById('fpSexo_'+i).value = p.sexo;
+    document.getElementById('fpEdad_'+i).value = p.edad;
+    document.getElementById('fpAsiento_'+i).value = p.asiento;
+    document.getElementById('fpRecibo_'+i).value = p.recibo;
+  });
+}
+
+function renderFlightAirlineOptions(){
+  for(let i=0;i<flightLegRows;i++){
+    const sel = document.getElementById('flAirline_'+i);
+    if(!sel) continue;
+    const cur = sel.value;
+    sel.innerHTML = '<option value="">-- selecciona aerolínea --</option>' + AIRLINES.map(a=>`<option value="${a.code}">${a.name}</option>`).join('');
+    if(cur) sel.value = cur;
+  }
+}
+function renderFlightAirportOptions(){
+  const html = airportOptionsHTML();
+  for(let i=0;i<flightLegRows;i++){
+    const origSel = document.getElementById('flOrig_'+i);
+    const destSel = document.getElementById('flDest_'+i);
+    if(origSel){ const cur=origSel.value; origSel.innerHTML = '<option value="">-- selecciona origen --</option>'+html; if(cur) origSel.value=cur; }
+    if(destSel){ const cur=destSel.value; destSel.innerHTML = '<option value="">-- selecciona destino --</option>'+html; if(cur) destSel.value=cur; }
+  }
+}
+function renderFlightLegRows(){
+  const box = document.getElementById('flightLegsBox');
+  box.innerHTML='';
+  for(let i=0;i<flightLegRows;i++){
+    box.insertAdjacentHTML('beforeend', `
+      <div class="row-item" id="flrow_${i}">
+        ${flightLegRows>1?`<button class="btn small danger remove-btn" onclick="removeFlightLeg(${i})">Quitar</button>`:''}
+        <div class="grid2">
+          <div><label>Aerolínea (obligatorio)</label><select id="flAirline_${i}" required></select></div>
+          <div><label>Número de vuelo (solo el número)</label><input type="text" id="flNumber_${i}" placeholder="Ej: 9525"></div>
+        </div>
+        <div class="grid2">
+          <div><label>Origen</label><select id="flOrig_${i}"></select></div>
+          <div><label>Destino</label><select id="flDest_${i}"></select></div>
+        </div>
+        <div class="grid2">
+          <div><label>Fecha y hora de salida</label><input type="datetime-local" id="flDepart_${i}"></div>
+          <div><label>Fecha y hora de llegada</label><input type="datetime-local" id="flArrive_${i}"></div>
+        </div>
+        <div class="grid2">
+          <div><label>Tipo de avión (opcional)</label><input type="text" id="flAircraft_${i}" placeholder="Ej: Airbus A320"></div>
+          <div><label>Cabina (opcional)</label><input type="text" id="flCabin_${i}" placeholder="Ej: Turista"></div>
+        </div>
+        <div class="grid2">
+          <div><label>Código de reserva (opcional)</label><input type="text" id="flResCode_${i}" placeholder="Ej: FSIRVY"></div>
+          <div><label>N.º de reserva de la aerolínea (opcional)</label><input type="text" id="flAirlineRes_${i}" placeholder="Ej: B5U729"></div>
+        </div>
+        <label>Equipaje incluido (opcional, con peso máximo permitido)</label>
+        <div class="grid3" style="margin-bottom:2px;align-items:end;">
+          <div>
+            <label style="display:flex;align-items:center;gap:6px;font-weight:400;margin-bottom:6px;"><input type="checkbox" id="flBagPersonal_${i}" style="width:auto;margin:0;">Artículo personal</label>
+            <input type="number" id="flBagPersonalKg_${i}" min="0" step="0.5" value="5" placeholder="kg máx.">
+          </div>
+          <div>
+            <label style="display:flex;align-items:center;gap:6px;font-weight:400;margin-bottom:6px;"><input type="checkbox" id="flBagCabin_${i}" style="width:auto;margin:0;">Equipaje de mano</label>
+            <input type="number" id="flBagCabinKg_${i}" min="0" step="0.5" value="10" placeholder="kg máx.">
+          </div>
+          <div>
+            <label style="display:flex;align-items:center;gap:6px;font-weight:400;margin-bottom:6px;"><input type="checkbox" id="flBagHold_${i}" style="width:auto;margin:0;">Equipaje de bodega</label>
+            <input type="number" id="flBagHoldKg_${i}" min="0" step="0.5" value="23" placeholder="kg máx.">
+          </div>
+        </div>
+      </div>
+    `);
+  }
+  renderFlightAirlineOptions();
+  renderFlightAirportOptions();
+}
+function addFlightLeg(){ flightLegRows++; renderFlightLegRows(); }
+function removeFlightLeg(i){ flightLegRows--; renderFlightLegRows(); }
+
+function readFlightPassengers(){
+  const list=[];
+  for(let i=0;i<flightPassengerRows;i++){
+    const apellidos = document.getElementById('fpApellidos_'+i)?.value.trim();
+    const nombre = document.getElementById('fpNombre_'+i)?.value.trim();
+    const sexo = document.getElementById('fpSexo_'+i)?.value || 'F';
+    const edadRaw = document.getElementById('fpEdad_'+i)?.value;
+    const edad = parseInt(edadRaw, 10);
+    const asiento = document.getElementById('fpAsiento_'+i)?.value.trim();
+    const recibo = document.getElementById('fpRecibo_'+i)?.value.trim();
+    if(apellidos && nombre && !isNaN(edad)){
+      list.push({ apellidos, nombre, sexo, edad, asiento, recibo });
+    }
+  }
+  return list;
+}
+function readFlightLegs(){
+  const list=[];
+  const incomplete = [];
+  for(let i=0;i<flightLegRows;i++){
+    const airlineCode = document.getElementById('flAirline_'+i)?.value;
+    const airline = AIRLINES.find(a=>a.code===airlineCode);
+    const number = document.getElementById('flNumber_'+i)?.value.trim();
+    const origCode = document.getElementById('flOrig_'+i)?.value;
+    const destCode = document.getElementById('flDest_'+i)?.value;
+    const orig = airportByCode(origCode);
+    const dest = airportByCode(destCode);
+    const departRaw = document.getElementById('flDepart_'+i)?.value;
+    const arriveRaw = document.getElementById('flArrive_'+i)?.value;
+    const aircraft = document.getElementById('flAircraft_'+i)?.value.trim();
+    const cabin = document.getElementById('flCabin_'+i)?.value.trim();
+    const resCode = document.getElementById('flResCode_'+i)?.value.trim();
+    const airlineRes = document.getElementById('flAirlineRes_'+i)?.value.trim();
+    const bagPersonal = !!document.getElementById('flBagPersonal_'+i)?.checked;
+    const bagCabin = !!document.getElementById('flBagCabin_'+i)?.checked;
+    const bagHold = !!document.getElementById('flBagHold_'+i)?.checked;
+    const bagPersonalKg = document.getElementById('flBagPersonalKg_'+i)?.value;
+    const bagCabinKg = document.getElementById('flBagCabinKg_'+i)?.value;
+    const bagHoldKg = document.getElementById('flBagHoldKg_'+i)?.value;
+
+    const hasAnyData = airlineCode || number || origCode || destCode || departRaw || arriveRaw;
+    if(!hasAnyData) continue;
+    if(!airline || !number || !orig || !dest || !departRaw || !arriveRaw){
+      incomplete.push(i+1);
+      continue;
+    }
+    list.push({
+      airline, number, orig, dest,
+      depart: new Date(departRaw), arrive: new Date(arriveRaw),
+      aircraft, cabin, resCode, airlineRes,
+      baggage: {
+        personal: bagPersonal, personalKg: bagPersonalKg,
+        cabin: bagCabin, cabinKg: bagCabinKg,
+        hold: bagHold, holdKg: bagHoldKg
+      }
+    });
+  }
+  return { legs: list, incomplete };
+}
+
+function flightRouteHTML(leg){
+  return `
+  <div class="doc-route">
+    <div class="doc-route-pt">
+      <div class="doc-route-code">${leg.orig.code}</div>
+      <div class="doc-route-city">${upper(leg.orig.city)}, ${upper(leg.orig.country)}</div>
+    </div>
+    <div class="doc-route-arrow">&#10230;</div>
+    <div class="doc-route-pt">
+      <div class="doc-route-code">${leg.dest.code}</div>
+      <div class="doc-route-city">${upper(leg.dest.city)}, ${upper(leg.dest.country)}</div>
+    </div>
+  </div>`;
+}
+function passengerFlightTableHTML(passengers){
+  const showReceipts = passengers.some(p=>p.recibo);
+  const thStyle = 'text-align:left;padding:8px;';
+  const tdStyle = 'text-align:left;padding:8px;';
+  let header = `<tr><th style="${thStyle}">Pasajero</th><th style="${thStyle}">Asiento</th>`;
+  if(showReceipts) header += `<th style="${thStyle}">Recibo de boleto electrónico</th>`;
+  header += '</tr>';
+  const rows = passengers.map(p=>{
+    let row = `<tr><td style="${tdStyle}">${passengerDisplayName(p)}</td><td style="${tdStyle}">${p.asiento || 'Sin asignar'}</td>`;
+    if(showReceipts) row += `<td style="${tdStyle}">${p.recibo || '-'}</td>`;
+    row += '</tr>';
+    return row;
+  }).join('');
+  return `<table class="doc-flight-table" style="width:100%;border-collapse:collapse;">${header}${rows}</table>`;
+}
+function pageFlightLeg(leg, passengers, titularName){
+  const bagItems = [];
+  if(leg.baggage.personal) bagItems.push(`Artículo personal${leg.baggage.personalKg ? ` (máx. ${leg.baggage.personalKg} kg)` : ''}`);
+  if(leg.baggage.cabin) bagItems.push(`Equipaje de mano${leg.baggage.cabinKg ? ` (máx. ${leg.baggage.cabinKg} kg)` : ''}`);
+  if(leg.baggage.hold) bagItems.push(`Equipaje de bodega${leg.baggage.holdKg ? ` (máx. ${leg.baggage.holdKg} kg)` : ''}`);
+
+  const durationTxt = fmtDuration(computeFlightDurationMinutes(leg));
+  const isGuaranteed = !!leg.resCode && passengers.length>0 && passengers.every(p=>p.recibo);
+  const estadoTxt = isGuaranteed ? 'tu vuelo está garantizado.' : 'tu vuelo está confirmado.';
+
+  const rows = [];
+  rows.push(`<div class="trow"><div class="lbl">Salida</div><div class="val">${fmtFlightDateTime(leg.depart)}</div></div>`);
+  rows.push(`<div class="trow"><div class="lbl">Llegada</div><div class="val">${fmtFlightDateTime(leg.arrive)}</div></div>`);
+  if(durationTxt) rows.push(`<div class="trow"><div class="lbl">Duración</div><div class="val">${durationTxt}</div></div>`);
+  if(leg.aircraft) rows.push(`<div class="trow"><div class="lbl">Tipo de avión</div><div class="val">${leg.aircraft}</div></div>`);
+  if(leg.cabin) rows.push(`<div class="trow"><div class="lbl">Cabina</div><div class="val">${leg.cabin}</div></div>`);
+  if(leg.resCode) rows.push(`<div class="trow"><div class="lbl">Código de reserva</div><div class="val">${upper(leg.resCode)}</div></div>`);
+  if(leg.airlineRes) rows.push(`<div class="trow"><div class="lbl">N.º de reserva de la aerolínea</div><div class="val">${upper(leg.airlineRes)} (${leg.airline.code})</div></div>`);
+
+  return `
+  <div class="doc-page">
+    ${headerHTML()}
+    <div class="doc-banner">
+      <img class="check" src="${CHECK_SRC}">
+      <div class="banner-text"><b>${upper(titularName)}</b>, ${estadoTxt}</div>
+    </div>
+    <div class="doc-hotelblock">
+      <div class="hinfo" style="flex:1;">
+        ${flightRouteHTML(leg)}
+        <div class="doc-unit-sub" style="margin-top:16px;margin-bottom:0;">${upper(leg.airline.name)} · ${leg.airline.code} ${leg.number}</div>
+      </div>
+    </div>
+    <div class="doc-table">${rows.join('')}</div>
+    ${bagItems.length ? `
+    <div class="doc-section-title">Equipaje incluido</div>
+    <ul class="doc-baglist">${bagItems.map(b=>`<li>${b}</li>`).join('')}</ul>` : ''}
+    <div class="doc-section-title">Pasajeros</div>
+    ${passengerFlightTableHTML(passengers)}
+    ${footerHTML()}
+  </div>`;
+}
+function pagePoliticasCancelacion(){
+  return `
+  <div class="doc-page">
+    ${headerHTML()}
+    <div class="doc-unit-title" style="font-size:18px;">Política de Cancelaciones y reembolsos</div>
+    <p>La posibilidad de modificar o cancelar una reserva depende de varios factores, como:</p>
+    <div class="doc-req" style="margin-top:2px;">
+      <ul style="flex:1;padding-left:18px;">
+        <li><b>La política de cancelación del proveedor:</b> Cada proveedor, como aerolíneas, hoteles, empresas de alquiler de autos, etc., tiene sus propias políticas de cancelación. Algunas son más flexibles que otras.</li>
+        <li><b>El tipo de tarifa que reservaste:</b> Las tarifas con descuento o promocionales suelen tener restricciones de modificación o cancelación.</li>
+        <li><b>El tiempo que queda antes de la fecha de viaje:</b> Cuanto más cerca esté la fecha de viaje, menos probable es que puedas modificar o cancelar sin penalización.</li>
+      </ul>
+    </div>
+    <p style="margin-top:18px;">En general, las opciones de modificación o cancelación pueden incluir:</p>
+    <div class="doc-req" style="margin-top:2px;">
+      <ul style="flex:1;padding-left:18px;">
+        <li><b>Pagar una tarifa de penalización:</b> El monto de la tarifa varía según la política del proveedor y el tiempo que queda antes de la fecha de viaje.</li>
+        <li><b>Cambiar la fecha o el destino de tu viaje:</b> Algunas veces puedes cambiar tu viaje sin pagar una tarifa de penalización, pero esto dependerá de la disponibilidad y las políticas del proveedor.</li>
+        <li><b>Cancelar tu viaje y recibir un reembolso parcial o total:</b> El monto del reembolso dependerá de la política del proveedor y el tiempo que queda antes de la fecha de viaje.</li>
+      </ul>
+    </div>
+    <p style="margin-top:18px;">Es importante tener en cuenta que:</p>
+    <div class="doc-req" style="margin-top:2px;">
+      <ul style="flex:1;padding-left:18px;">
+        <li>Las políticas de modificación y cancelación pueden cambiar sin previo aviso.</li>
+        <li>No siempre es posible modificar o cancelar una reserva sin penalización.</li>
+      </ul>
+    </div>
+    <p style="margin-top:18px;"><b>Nota importante:</b> Es responsabilidad del pasajero revisar, antes de la fecha de viaje, que toda la información registrada en su voucher sea correcta —nombres completos de los viajeros, itinerario, y ciudades y horarios de salida y llegada—. Cualquier inconsistencia debe reportarse a la agencia con anticipación; una vez iniciado el viaje no será posible corregirla, y la agencia no se hace responsable por inconvenientes derivados de datos incorrectos que no hayan sido notificados a tiempo.</p>
+    ${footerHTML()}
+  </div>`;
+}
+function buildFlightDocumentHTML(passengers, legs){
+  const titular = passengers[0];
+  let pagesHTML = '';
+  legs.forEach(leg=>{
+    pagesHTML += pageFlightLeg(leg, passengers, passengerDisplayName(titular));
+  });
+  pagesHTML += pagePoliticasCancelacion();
+  return { html: pagesHTML, titular };
+}
+async function generateFlightPDF(passengers, legs){
+  const { html, titular } = buildFlightDocumentHTML(passengers, legs);
+  const overlay = document.getElementById('pdf-overlay');
+  const root = document.getElementById('pdf-render-root');
+  const msg = document.getElementById('pdf-overlay-msg');
+
+  root.innerHTML = html;
+  overlay.classList.add('show');
+  msg.textContent = 'Cargando...';
+
+  await waitForImages(root);
+  await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+
+  const filename = 'Itinerario_vuelo_' + passengerDisplayName(titular).trim().replace(/\s+/g,'_').replace(/\//g,'-') + '.pdf';
+  msg.textContent = 'Generando PDF...';
+
+  const opt = {
+    margin: 0,
+    filename,
+    image: { type:'jpeg', quality:0.98 },
+    html2canvas: { scale:2, useCORS:true, allowTaint:true, logging:false },
+    jsPDF: { unit:'in', format: 'letter', orientation:'portrait' }
+  };
+
+  const pages = Array.from(root.querySelectorAll('.doc-page'));
+  try{
+    let worker = html2pdf().set(opt).from(pages[0]).toContainer().toCanvas().toPdf();
+    for(let i=1;i<pages.length;i++){
+      const page = pages[i];
+      worker = worker.get('pdf').then(pdf=>{ pdf.addPage(); })
+                      .from(page).toContainer().toCanvas().toPdf();
+    }
+    await worker.get('pdf').then(pdf=> pdf.save(filename));
+    toast('Tiquete generado: ' + filename);
+  } finally {
+    overlay.classList.remove('show');
+    root.innerHTML='';
+  }
+}
+async function onGenerateFlightClick(){
+  const passengers = readFlightPassengers();
+  const { legs, incomplete } = readFlightLegs();
+  if(passengers.length===0){ alert('Agrega al menos un pasajero con apellidos, nombre y edad.'); return; }
+  if(incomplete.length>0){
+    alert(`Completa la aerolínea, el número de vuelo, origen, destino y fechas del trayecto ${incomplete.length>1?'#s':'#'} ${incomplete.join(', ')} (la aerolínea es obligatoria).`);
+    return;
+  }
+  if(legs.length===0){ alert('Agrega al menos un trayecto completo (aerolínea, número de vuelo, origen, destino y fechas).'); return; }
+  const btn = document.getElementById('generateFlightBtn');
+  btn.disabled=true; btn.textContent='Generando...';
+  try{
+    await generateFlightPDF(passengers, legs);
+  }catch(e){
+    console.error(e);
+    alert('Ocurrió un error generando el tiquete: '+e.message);
+  }finally{
+    btn.disabled=false; btn.textContent='Generar tiquete';
+  }
+}
+
+/* =========================================================================
    Tabs
    ========================================================================= */
 function switchTab(name){
@@ -930,11 +1633,16 @@ window.addEventListener('DOMContentLoaded', async ()=>{
   renderItinTab();
   renderPassengerRows();
   renderStayRows();
+  renderFlightPassengerRows();
+  renderFlightLegRows();
 
   document.querySelectorAll('.tab-btn').forEach(b=>b.addEventListener('click', ()=>switchTab(b.dataset.tab)));
   document.getElementById('addPassengerBtn').addEventListener('click', addPassenger);
   document.getElementById('addStayBtn').addEventListener('click', addStay);
   document.getElementById('generateBtn').addEventListener('click', onGenerateClick);
+  document.getElementById('addFlightPassengerBtn').addEventListener('click', addFlightPassenger);
+  document.getElementById('addFlightLegBtn').addEventListener('click', addFlightLeg);
+  document.getElementById('generateFlightBtn').addEventListener('click', onGenerateFlightClick);
   document.getElementById('saveHotelBtn').addEventListener('click', saveHotelForm);
   document.getElementById('newHotelBtn').addEventListener('click', clearHotelForm);
   document.getElementById('exportHotelsBtn').addEventListener('click', exportHotels);
