@@ -1542,7 +1542,7 @@ function pagePoliticasCancelacion(){
         <li>No siempre es posible modificar o cancelar una reserva sin penalización.</li>
       </ul>
     </div>
-    <p style="margin-top:18px;"><b>Nota importante:</b> Es responsabilidad del pasajero revisar, antes de la fecha de viaje, que toda la información registrada en su voucher sea correcta —nombres completos de los viajeros, itinerario, y ciudades y horarios de salida y llegada—. Cualquier inconsistencia debe reportarse a la agencia con anticipación; una vez iniciado el viaje no será posible corregirla, y la agencia no se hace responsable por inconvenientes derivados de datos incorrectos que no hayan sido notificados a tiempo.</p>
+    <p style="margin-top:18px;"><b>Nota importante:</b> Es responsabilidad del pasajero revisar, antes de la emisión del tiquete, que toda la información registrada en su voucher sea correcta —nombres completos de los viajeros, itinerario, y ciudades y horarios de salida y llegada—. Cualquier inconsistencia debe reportarse a la agencia con anticipación; una vez emitido el tiquete no será posible corregirla, y la agencia no se hace responsable por inconvenientes derivados de datos incorrectos que no hayan sido notificados a tiempo.</p>
     ${footerHTML()}
   </div>`;
 }
