@@ -584,6 +584,7 @@ function addCity(){
   document.getElementById('itinCitySelect').value=name;
   renderItinActivities();
   renderHotelsTab();
+  renderOtroCityOptions();
 }
 function deleteCity(){
   const city = document.getElementById('itinCitySelect').value;
@@ -591,6 +592,7 @@ function deleteCity(){
   if(!confirm(`¿Eliminar el destino "${city}" y todas sus actividades?`)) return;
   delete ITIN[city];
   saveItin(); renderItinTab(); renderHotelsTab();
+  renderOtroCityOptions();
 }
 function addActivity(){
   const city = document.getElementById('itinCitySelect').value;
@@ -616,6 +618,7 @@ function importItinFile(evt){
     try{
       const data = JSON.parse(e.target.result);
       ITIN = data; saveItin(); renderItinTab(); renderHotelsTab();
+      renderOtroCityOptions();
       toast('Itinerarios importados');
     }catch(err){ alert('Archivo JSON inválido: '+err.message); }
   };
@@ -633,6 +636,90 @@ function downloadJSON(obj, filename){
 /* =========================================================================
    UI: Generar tab
    ========================================================================= */
+
+/* Opción "Otro" del selector de hotel: reutiliza los datos fijos del hotel
+   Agapo Home (id: agapo-home-toledo) y solo permite editar los campos de
+   identidad del hotel (nombre, dirección, ciudad/itinerario, CP, país y teléfono). */
+const AGAPO_HOME_FALLBACK = {
+  photo:'assets/sample-hotel-toledo.jpg',
+  checkinRange:'15:00 - 23:00',
+  checkoutTime:'11:00',
+  mealsPolicy:'equal',
+  amenities:{
+    internet:'wifi gratis',
+    alimentos:'servicio a la habitación',
+    descanso:'cortinas blackout',
+    bano:'baño privado',
+    infoPractica:'escritorio y plancha/tabla de planchar (previa solicitud); camas plegables/extra disponibles previa solicitud, y cunas gratuitas, también previa solicitud.',
+    comodidades:'servicio de limpieza diario, petfriendly y sistemas de calefacción y aire acondicionado',
+    accesoDiscapacitados:'acceso para silla de ruedas',
+    infoImportante:'cunas o camas plegables/extra no disponibles',
+    fumadores:'Para no fumadores',
+    entretenimiento:'',
+    detallesPracticos:''
+  },
+  requisitos:[
+    'Es obligatorio dejar un depósito en efectivo, con tarjeta de débito o con tarjeta de crédito para cubrir gastos imprevistos',
+    'Es obligatorio presentar una identificación oficial válida',
+    'La edad mínima para realizar el check-in es de 18 años.'
+  ]
+};
+
+function getAgapoTemplate(){
+  const found = HOTELS.find(h=>h.id==='agapo-home-toledo');
+  if(found){
+    return {
+      photo: 'assets/otro.jpg',
+      checkinRange: found.checkinRange,
+      checkoutTime: found.checkoutTime,
+      mealsPolicy: found.mealsPolicy,
+      amenities: Object.assign({}, found.amenities),
+      requisitos: (found.requisitos||[]).slice()
+    };
+  }
+  return JSON.parse(JSON.stringify(AGAPO_HOME_FALLBACK));
+}
+
+/* País según el destino/ciudad elegido en "Otro". Cubre los destinos que ya
+   trae itinerarios.json; si aparece un destino nuevo que no está en este
+   mapa, se usa España por defecto. */
+const CITY_COUNTRIES = {
+  'Toledo / Madrid':   { code:'ES', name:'España' },
+  'Valencia':          { code:'ES', name:'España' },
+  'A Coruña':          { code:'ES', name:'España' },
+  'Sevilla':           { code:'ES', name:'España' },
+  'Paris':             { code:'FR', name:'Francia' },
+  'Palma de Mallorca': { code:'ES', name:'España' },
+  'Brussels':          { code:'BE', name:'Bélgica' },
+  'Málaga':            { code:'ES', name:'España' },
+  'Tenerife':          { code:'ES', name:'España' },
+  'Gran Canaria':      { code:'ES', name:'España' },
+  'Fuerteventura':     { code:'ES', name:'España' },
+  'Lanzarote':         { code:'ES', name:'España' },
+  'Alicante':          { code:'ES', name:'España' },
+  'Barcelona':         { code:'ES', name:'España' },
+  'Bilbao':            { code:'ES', name:'España' },
+  'Pamplona':          { code:'ES', name:'España' },
+  'Estambul':          { code:'TR', name:'Turquía' },
+  'Tarragona':         { code:'ES', name:'España' },
+  'México City':       { code:'MX', name:'México' },
+  'Cancún':            { code:'MX', name:'México' },
+  'Londres':           { code:'GB', name:'Reino Unido' }
+};
+const COUNTRY_OPTIONS = [
+  { code:'ES', name:'España' },
+  { code:'FR', name:'Francia' },
+  { code:'IT', name:'Italia' },
+  { code:'DE', name:'Alemania' },
+  { code:'BE', name:'Bélgica' },
+  { code:'TR', name:'Turquía' },
+  { code:'MX', name:'México' },
+  { code:'GB', name:'Reino Unido' }
+];
+function countryForCity(city){
+  return (CITY_COUNTRIES[city] && CITY_COUNTRIES[city].code) || 'ES';
+}
+
 let passengerRows = 1;
 let stayRows = 1;
 
@@ -681,9 +768,45 @@ function renderStaysHotelOptions(){
     const sel = document.getElementById('shotel_'+i);
     if(!sel) continue;
     const cur = sel.value;
-    sel.innerHTML = '<option value="">-- selecciona hotel --</option>' + HOTELS.map(h=>`<option value="${h.id}">${titleCase(h.name)} (${titleCase(h.city)})</option>`).join('');
+    sel.innerHTML = '<option value="">-- selecciona hotel --</option>'
+      + HOTELS.map(h=>`<option value="${h.id}">${titleCase(h.name)} (${titleCase(h.city)})</option>`).join('')
+      + '<option value="otro">Otro</option>';
     if(cur) sel.value = cur;
+    sel.onchange = ()=> toggleOtroHotelFields(i);
+    toggleOtroHotelFields(i);
   }
+}
+function toggleOtroHotelFields(i){
+  const sel = document.getElementById('shotel_'+i);
+  const box = document.getElementById('otroFields_'+i);
+  if(!sel || !box) return;
+  box.style.display = (sel.value==='otro') ? '' : 'none';
+}
+function renderOtroCityOptions(){
+  const cities = Object.keys(ITIN);
+  document.querySelectorAll('select[id^="ohCity_"]').forEach(sel=>{
+    const cur = sel.value;
+    const i = sel.id.replace('ohCity_','');
+    sel.innerHTML = cities.length
+      ? cities.map(c=>{return c==='Toledo / Madrid' ? `<option value="${c}">Madrid</option>` : `<option value="${c}">${c}</option>`}).join('')
+      : '<option value=""></option>';
+    if(cur && cities.includes(cur)) sel.value = cur;
+    sel.onchange = ()=> syncOtroCountry(i);
+    renderOtroCountrySelect(i);
+    syncOtroCountry(i);
+  });
+}
+function renderOtroCountrySelect(i){
+  const sel = document.getElementById('ohCountry_'+i);
+  if(!sel) return;
+  sel.innerHTML = COUNTRY_OPTIONS.map(c=>`<option value="${c.code}">${c.name}</option>`).join('');
+  sel.disabled = true; // el país se calcula automáticamente según la ciudad elegida
+}
+function syncOtroCountry(i){
+  const citySel = document.getElementById('ohCity_'+i);
+  const countrySel = document.getElementById('ohCountry_'+i);
+  if(!citySel || !countrySel) return;
+  countrySel.value = countryForCity(citySel.value);
 }
 function renderStayRows(){
   const box = document.getElementById('staysBox');
@@ -698,13 +821,47 @@ function renderStayRows(){
           <div><label>Check-out</label><input type="date" id="sout_${i}" required></div>
           <div><label>Número de confirmación</label><input type="text" id="sconf_${i}" placeholder="Ej: 0123456789" required></div>
         </div>
+        <div class="grid2" id="otroFields_${i}" style="display:none;margin-top:10px;">
+          <div><label>Nombre del hotel</label><input type="text" id="ohName_${i}" placeholder="Ej: Hotel Central"></div>
+          <div><label>Ciudad</label><select id="ohCity_${i}"></select></div>
+          <div><label>Dirección</label><input type="text" id="ohStreet_${i}" placeholder="Ej: Rue de Rivoli 10"></div>
+          <div><label>Código postal</label><input type="text" id="ohPostal_${i}" placeholder="Ej: 75001"></div>
+          <div><label>País (automático según ciudad)</label>
+            <select id="ohCountry_${i}"></select>
+          </div>
+          <div><label>Teléfono</label><input type="text" id="ohPhone_${i}" placeholder="Ej: +33 1 23 45 67 89"></div>
+        </div>
       </div>
     `);
   }
   renderStaysHotelOptions();
+  renderOtroCityOptions();
 }
 function addStay(){ stayRows++; renderStayRows(); }
 function removeStay(i){ stayRows--; renderStayRows(); }
+
+function buildOtroHotel(i){
+  const name = document.getElementById('ohName_'+i)?.value.trim();
+  const street = document.getElementById('ohStreet_'+i)?.value.trim();
+  const city = document.getElementById('ohCity_'+i)?.value || '';
+  const postalCode = document.getElementById('ohPostal_'+i)?.value.trim();
+  const country = document.getElementById('ohCountry_'+i)?.value || 'ES';
+  const phone = document.getElementById('ohPhone_'+i)?.value.trim();
+  const tpl = getAgapoTemplate();
+  const var_city = city==='Toledo / Madrid' ? 'Madrid' : city;
+  const foto = city==='Toledo / Madrid' ? 'assets/otro.jpg' : `assets/${city}.jpg`;
+  return {
+    id: 'otro_' + i + '_' + Date.now(),
+    name, street, city: var_city, postalCode, country, phone,
+    itineraryCity: city,
+    photo: foto,
+    checkinRange: tpl.checkinRange,
+    checkoutTime: tpl.checkoutTime,
+    mealsPolicy: tpl.mealsPolicy,
+    amenities: tpl.amenities,
+    requisitos: tpl.requisitos
+  };
+}
 
 function readPassengersFromForm(){
   const list=[];
@@ -723,7 +880,7 @@ function readStaysFromForm(){
     const cout = document.getElementById('sout_'+i)?.value;
     const conf = document.getElementById('sconf_'+i)?.value.trim();
     if(hid && cin && cout){
-      const hotel = HOTELS.find(h=>h.id===hid);
+      const hotel = hid==='otro' ? buildOtroHotel(i) : HOTELS.find(h=>h.id===hid);
       list.push({ hotel, checkin: parseDate(cin), checkout: parseDate(cout), confirmNo: conf });
     }
   }
@@ -738,6 +895,10 @@ async function onGenerateClick(){
   if(stays.length===0){ alert('Agrega al menos una estadía de hotel con fechas válidas.'); return; }
   for(const s of stays){
     if(s.checkout<=s.checkin){ alert('La fecha de check-out debe ser posterior al check-in.'); return; }
+    if(!s.confirmNo){ alert('Completa el número de confirmación.'); return; }
+    if(s.hotel.id.startsWith('otro_') && (!s.hotel.name || !s.hotel.city || !s.hotel.street || !s.hotel.postalCode || !s.hotel.phone || !s.hotel.itineraryCity)){
+      alert('Completa todos los campos del hotel marcado como "Otro".'); return;
+    }
   }
   const btn = document.getElementById('generateBtn');
   btn.disabled=true; btn.textContent='Generando...';

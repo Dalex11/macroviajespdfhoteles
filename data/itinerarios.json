@@ -25,14 +25,544 @@
       "cuerpo": "Disfruta de una jornada especial recorriendo el famoso **Museo del Prado**, una de las pinacotecas más importantes del mundo. Admira obras maestras de Velázquez, Goya, El Bosco y Rubens.\nA mediodía, breve caminata por el **Paseo del Arte** y tiempo libre para compras de última hora o para disfrutar de un café en alguna de las terrazas madrileñas.\nEn la noche, **cena de despedida** en un restaurante típico madrileño con espectáculo de flamenco en vivo. Una experiencia inolvidable para cerrar con broche de oro esta travesía por Europa."
     }
   ],
-  "Valencia": [
+  "A Coruña": [
     {
-      "titulo": "Ciudad de las Artes y las Ciencias",
-      "cuerpo": "Visita a la ciudad de las artes y las ciencias. Salida 8:00 AM desde el Hotel.\nDescubra la interesante Ciudad de las Artes y las Ciencias, la parte más moderna de Valencia. El billete combinado le permite conocer varios de sus edificios como el Museo de la Ciencia Príncipe Felipe o el Oceanográfica, así como una visita guiada a lo largo de todo el complejo, visitando la espectacular ciudad creada por Santiago Calatrava y la función de cada uno de los edificios."
+      "titulo": "Tour a pie por el centro histórico",
+      "cuerpo": "Recepción del hotel 10:40 am donde nos trasladaremos en autobús para ir Dirígete a la plaza de María Pita para comenzar un tour a pie de dos horas que te mostrará los monumentos más famosos de la ciudad, así como el sabor de sus barrios. Contempla el jardín de San Carlos con vistas al puerto. A continuación, visita la Calle Real, la calle principal del centro de la ciudad, llena de tiendas y pequeños restaurantes. La parte más importante del tour será la visita a las calles de la Ciudad Vieja y el mercado de la plaza de Lugo.\nDescubrirás quién era María Pita, el vínculo entre Pablo Picasso y A Coruña, la historia del faro más antiguo del mundo, la torre de Hércules y mucho más."
+    },
+    {
+      "titulo": "Torre de Hércules y Paseo Marítimo",
+      "cuerpo": "Desayuno en el hotel. Posteriormente realizaremos una visita a la Torre de Hércules, declarada Patrimonio de la Humanidad por la UNESCO, donde podremos recorrer su entorno natural y disfrutar de las espectaculares vistas del océano Atlántico. Continuaremos con una caminata por el Paseo Marítimo y finalizaremos la jornada con la visita al Monte de San Pedro, uno de los mejores miradores de la ciudad."
+    },
+    {
+      "titulo": "Castillo de San Antón y playas de Riazor",
+      "cuerpo": "Desayuno en el hotel. Iniciaremos el recorrido con la visita al Castillo de San Antón, antigua fortaleza convertida en museo arqueológico. Posteriormente disfrutaremos de tiempo libre para recorrer las playas de Riazor y Orzán, así como el paseo marítimo y las principales zonas comerciales de la ciudad."
+    },
+    {
+      "titulo": "Excursión a Santiago de Compostela",
+      "cuerpo": "Desayuno en el hotel. Excursión de día completo a Santiago de Compostela, donde visitaremos la Plaza del Obradoiro, la Catedral de Santiago, el casco histórico declarado Patrimonio de la Humanidad y el Mercado de Abastos. Al finalizar el recorrido regresaremos a A Coruña."
+    },
+    {
+      "titulo": "Betanzos, pueblo medieval",
+      "cuerpo": "Desayuno en el hotel. Salida hacia Betanzos, uno de los pueblos medievales mejor conservados de Galicia. Recorreremos su casco histórico, conoceremos sus iglesias y plazas tradicionales y disfrutaremos de tiempo libre para degustar la reconocida tortilla de Betanzos. Regreso al hotel en A Coruña."
+    },
+    {
+      "titulo": "Parque Natural Fragas do Eume",
+      "cuerpo": "Desayuno en el hotel. Excursión al Parque Natural Fragas do Eume, uno de los bosques atlánticos mejor conservados de Europa. Realizaremos un recorrido por sus senderos y visitaremos el Monasterio de Caaveiro, rodeado de un entorno natural único. Regreso al hotel."
+    },
+    {
+      "titulo": "Aquarium Finisterrae y Casa del Hombre",
+      "cuerpo": "Desayuno en el hotel. Visitaremos el Aquarium Finisterrae, uno de los acuarios más importantes de España, y posteriormente la Domus o Casa del Hombre, museo interactivo dedicado al ser humano. Tarde libre para disfrutar del centro histórico o realizar compras."
+    },
+    {
+      "titulo": "Costa da Morte",
+      "cuerpo": "Desayuno en el hotel. Excursión de día completo por la Costa da Morte, visitando algunos de sus paisajes más representativos, incluyendo el Cabo Finisterre, el Faro de Finisterre y el Santuario de la Virgen de la Barca en Muxía. Regreso a A Coruña al finalizar la tarde."
+    },
+    {
+      "titulo": "Pueblos marineros: Malpica, Ponteceso y Corme",
+      "cuerpo": "Desayuno en el hotel. Recorrido por los pueblos marineros de Malpica, Ponteceso y Corme, donde conoceremos la tradición pesquera de la región, disfrutaremos de sus paisajes costeros y contaremos con tiempo libre para almorzar y recorrer sus calles."
+    },
+    {
+      "titulo": "Oleiros, Castillo de Santa Cruz y Playa de Santa Cristina",
+      "cuerpo": "Desayuno en el hotel. Salida hacia el municipio de Oleiros para visitar el Castillo de Santa Cruz y recorrer la Playa de Santa Cristina y el puerto de Mera. Tiempo libre para disfrutar de la gastronomía local antes del regreso al hotel."
+    }
+  ],
+  "Alicante": [
+    {
+      "titulo": "Recorrido panorámico por Alicante",
+      "cuerpo": "Recorrido panorámico por Alicante. Salida 9:00 AM desde el Hotel.\nDescubre los principales lugares de interés de Alicante en un recorrido por la ciudad. Conoce el centro histórico, sus plazas y calles tradicionales mientras contemplas algunos de sus monumentos más representativos. Recorre la Explanada de España, el puerto y el paseo marítimo, disfrutando de la combinación entre historia, arquitectura y el ambiente mediterráneo que caracteriza a la ciudad."
+    },
+    {
+      "titulo": "Castillo de Santa Bárbara",
+      "cuerpo": "Visita al Castillo de Santa Bárbara. Salida 9:00 AM desde el Hotel.\nDescubre uno de los monumentos más importantes de Alicante en una visita al Castillo de Santa Bárbara, situado en lo alto del monte Benacantil. Recorre sus antiguas murallas, torres y diferentes espacios históricos mientras conoces la importancia de esta fortaleza a lo largo de los siglos. Desde sus miradores disfruta de unas impresionantes vistas panorámicas sobre Alicante, el puerto y el mar Mediterráneo."
+    },
+    {
+      "titulo": "Isla de Tabarca",
+      "cuerpo": "Excursión a la Isla de Tabarca. Salida 9:00 AM desde el Hotel.\nRealiza una excursión en barco hasta la Isla de Tabarca, la única isla habitada de la Comunidad Valenciana. Recorre sus calles y descubre las antiguas murallas, la iglesia y las pequeñas casas de este tradicional pueblo marinero. Disfruta de tiempo libre para conocer sus aguas cristalinas, practicar actividades acuáticas o relajarte en sus playas y calas."
+    },
+    {
+      "titulo": "Guadalest y Fuentes del Algar",
+      "cuerpo": "Excursión a Guadalest y Fuentes del Algar. Salida 8:00 AM desde el Hotel.\nDescubre algunos de los paisajes más espectaculares de la provincia de Alicante. Visita Guadalest, un pequeño pueblo situado en lo alto de una montaña, rodeado de impresionantes paisajes y conocido por su castillo y sus casas tradicionales. Continúa hacia las Fuentes del Algar, un espacio natural formado por cascadas, piscinas naturales y abundante vegetación, donde podrás disfrutar de un agradable paseo rodeado de naturaleza."
+    },
+    {
+      "titulo": "Elche y el Palmeral",
+      "cuerpo": "Visita a Elche y Palmeral. Salida 9:00 AM desde el Hotel.\nDescubre la ciudad de Elche y su impresionante Palmeral, declarado Patrimonio de la Humanidad por la UNESCO. Recorre los jardines y caminos rodeados de miles de palmeras y conoce la importancia histórica de este paisaje agrícola. Continúa el recorrido por el centro de Elche para descubrir sus principales monumentos, plazas y tradiciones, disfrutando de una jornada que combina cultura y naturaleza."
+    },
+    {
+      "titulo": "Altea y Villajoyosa",
+      "cuerpo": "Visita a Altea y Villajoyosa. Salida 9:00 AM desde el Hotel.\nDescubre dos de los pueblos costeros más encantadores de la provincia de Alicante. Recorre las calles blancas y empedradas de Altea hasta llegar a su casco antiguo, desde donde podrás disfrutar de unas bonitas vistas del Mediterráneo. Continúa hacia Villajoyosa, conocida por sus casas de colores frente al mar y su tradición chocolatera. Disfruta de tiempo libre para pasear por sus calles, conocer sus playas y probar algunos productos típicos de la zona."
+    }
+  ],
+  "Barcelona": [
+    {
+      "titulo": "Recorrido panorámico por la ciudad",
+      "cuerpo": "Recorrido panorámico por la ciudad. Salida 9:00 AM desde el Hotel.\nDescubre los principales lugares de interés de Barcelona en un recorrido panorámico por la ciudad. Conoce algunos de sus monumentos más representativos, como la Sagrada Familia, el Paseo de Gracia, la Casa Batlló, la Casa Milà y la Plaza de Cataluña. Disfruta de un recorrido por las principales avenidas y barrios de Barcelona mientras conoces la historia, arquitectura y cultura que caracterizan a esta ciudad mediterránea."
+    },
+    {
+      "titulo": "Sagrada Familia",
+      "cuerpo": "Visita a la Sagrada Familia. Salida 9:00 AM desde el Hotel.\nDescubre uno de los monumentos más emblemáticos de Barcelona y una de las obras más importantes de Antoni Gaudí. Recorre el interior de la basílica y admira sus impresionantes columnas, vitrales y detalles arquitectónicos inspirados en la naturaleza. Conoce la historia de su construcción y descubre el significado de las diferentes fachadas y elementos que forman parte de esta obra única."
+    },
+    {
+      "titulo": "Parque Güell y barrio de Gràcia",
+      "cuerpo": "Visita al Parque Güell y recorrido por el barrio de Gràcia. Salida 9:00 AM desde el Hotel.\nDescubre el Parque Güell, una de las obras más reconocidas de Antoni Gaudí y declarado Patrimonio de la Humanidad por la UNESCO. Recorre sus jardines, terrazas y espacios decorados con el característico trencadís mientras disfrutas de las vistas panorámicas de Barcelona. Continúa hacia el barrio de Gràcia, conocido por sus pequeñas plazas, calles tradicionales y ambiente local, donde tendrás tiempo libre para disfrutar de sus cafés y restaurantes."
+    },
+    {
+      "titulo": "Barrio Gótico y Las Ramblas",
+      "cuerpo": "Visita al Barrio Gótico y Las Ramblas. Salida 9:00 AM desde el Hotel.\nRecorre el corazón histórico de Barcelona y descubre el Barrio Gótico, con sus calles estrechas, plazas y edificios medievales. Conoce la Plaza Sant Jaume, la Plaza Real y algunos de los rincones más antiguos de la ciudad. Continúa el paseo por Las Ramblas, una de las avenidas más famosas de Barcelona, hasta llegar al Mercado de La Boquería, donde podrás conocer algunos de los productos y sabores tradicionales de Cataluña."
+    },
+    {
+      "titulo": "Montjuïc y Fuente Mágica",
+      "cuerpo": "Visita a Montjuïc y Fuente Mágica. Salida 9:00 AM desde el Hotel.\nDescubre la montaña de Montjuïc y algunos de los espacios culturales y naturales más importantes de Barcelona. Recorre sus jardines y miradores mientras disfrutas de impresionantes vistas sobre la ciudad y el puerto. Visita el Castillo de Montjuïc y conoce su historia como antigua fortaleza defensiva. Continúa hacia la zona de la Plaza de España y el entorno del antiguo recinto de la Exposición Internacional de 1929."
+    },
+    {
+      "titulo": "Monasterio de Montserrat",
+      "cuerpo": "Visita al Monasterio de Montserrat. Salida 8:00 AM desde el Hotel.\nRealiza una excursión a Montserrat, uno de los lugares naturales y religiosos más importantes de Cataluña. Recorre el impresionante macizo montañoso y visita el monasterio benedictino, donde se encuentra la imagen de la Virgen de Montserrat, conocida como La Moreneta. Disfruta de los paisajes de montaña y de tiempo libre para recorrer los alrededores, conocer sus senderos y contemplar las vistas panorámicas."
+    }
+  ],
+  "Bilbao": [
+    {
+      "titulo": "Recorrido panorámico por la ciudad",
+      "cuerpo": "Recorrido panorámico por la ciudad. Salida 9:00 AM desde el Hotel.\nDescubre los principales lugares de interés de Bilbao en un recorrido por la ciudad. Conoce el centro histórico, el Paseo del Arenal, el Ayuntamiento y las principales avenidas de la ciudad. Continúa hacia la zona moderna de Bilbao para contemplar algunos de sus edificios más representativos y disfrutar de las vistas junto a la ría del Nervión. Un recorrido ideal para conocer la transformación de esta ciudad y su combinación entre tradición y modernidad."
+    },
+    {
+      "titulo": "Museo Guggenheim Bilbao",
+      "cuerpo": "Visita al Museo Guggenheim Bilbao. Salida 9:00 AM desde el Hotel.\nDescubre uno de los museos de arte moderno y contemporáneo más importantes de España, ubicado a orillas de la ría del Nervión. Admira el espectacular edificio diseñado por Frank Gehry y recorre sus diferentes salas para conocer una importante colección de obras de artistas nacionales e internacionales. Durante la visita podrás contemplar también algunas de las esculturas más representativas situadas en los alrededores del museo."
+    },
+    {
+      "titulo": "Casco Viejo y Mercado de la Ribera",
+      "cuerpo": "Visita al Casco Viejo y Mercado de la Ribera. Salida 9:00 AM desde el Hotel.\nRecorre las conocidas Siete Calles del Casco Viejo de Bilbao y descubre el origen histórico de la ciudad. Pasea por sus calles estrechas, plazas y edificios tradicionales mientras conoces la historia y las costumbres del País Vasco. Continúa hacia el Mercado de la Ribera, uno de los mercados cubiertos más grandes de Europa, donde podrás conocer productos locales y disfrutar de algunos de los sabores tradicionales de la gastronomía vasca."
+    },
+    {
+      "titulo": "San Juan de Gaztelugatxe y Bermeo",
+      "cuerpo": "Excursión a San Juan de Gaztelugatxe y Bermeo. Salida 8:00 AM desde el Hotel.\nDescubre uno de los paisajes costeros más espectaculares del País Vasco en San Juan de Gaztelugatxe. Recorre el camino que conduce hasta la ermita situada sobre un islote, atravesando el famoso puente de piedra y disfrutando de las vistas sobre el mar Cantábrico. Continúa hacia Bermeo, tradicional pueblo pesquero, donde podrás recorrer su puerto y conocer la relación histórica de la localidad con el mar y la pesca."
+    },
+    {
+      "titulo": "Getxo y Puente Bizkaia",
+      "cuerpo": "Excursión a Getxo y Puente Bizkaia. Salida 9:00 AM desde el Hotel.\nDescubre la costa cercana a Bilbao recorriendo Getxo, uno de los municipios más elegantes y tradicionales de Vizcaya. Pasea por el Puerto Viejo y disfruta de las vistas sobre el mar Cantábrico. Continúa hacia el Puente Bizkaia, declarado Patrimonio de la Humanidad por la UNESCO, una impresionante estructura de hierro que conecta las localidades de Portugalete y Getxo. Disfruta de una experiencia diferente mientras conoces una de las grandes obras de la ingeniería europea."
+    },
+    {
+      "titulo": "Vitoria-Gasteiz y Rioja Alavesa",
+      "cuerpo": "Excursión a Vitoria-Gasteiz y Rioja Alavesa. Salida 8:00 AM desde el Hotel.\nDescubre Vitoria-Gasteiz, capital del País Vasco, recorriendo su casco medieval, sus plazas y edificios históricos. Continúa hacia la Rioja Alavesa para conocer sus paisajes de viñedos y alguno de sus pueblos tradicionales. Visita una bodega de la región y conoce el proceso de elaboración de los reconocidos vinos de Rioja, disfrutando de una degustación de productos locales. Una jornada que combina cultura, tradición y gastronomía vasca."
+    }
+  ],
+  "Brussels": [
+    {
+      "titulo": "Recorrido panorámico por Bruselas",
+      "cuerpo": "Recorrido panorámico por Bruselas. Salida 9:00 AM desde el Hotel.\nDescubre los principales monumentos y lugares de interés de Bruselas en un recorrido por la ciudad. Conoce el centro histórico y contempla algunos de sus edificios más emblemáticos, como el Palacio Real, el Palacio de Justicia, la Catedral de San Miguel y Santa Gúdula y el barrio europeo. Disfruta de una primera aproximación a la capital de Bélgica y conoce la historia que ha convertido a Bruselas en una de las ciudades más importantes de Europa."
+    },
+    {
+      "titulo": "Grand Place y centro histórico",
+      "cuerpo": "Visita a la Grand Place y centro histórico de Bruselas. Salida 9:00 AM desde el Hotel.\nDescubre la Grand Place, considerada una de las plazas más bonitas de Europa y declarada Patrimonio de la Humanidad por la UNESCO. Admira las fachadas de los edificios históricos que rodean la plaza, entre ellos el Ayuntamiento de Bruselas y las antiguas casas gremiales. Continúa el recorrido por las calles del centro histórico para conocer el ambiente tradicional de la ciudad y visita el famoso Manneken Pis, uno de los símbolos más reconocidos de Bruselas."
+    },
+    {
+      "titulo": "Atomium",
+      "cuerpo": "Visita al Atomium. Salida 9:00 AM desde el Hotel.\nDescubre uno de los monumentos más representativos de Bruselas, construido para la Exposición Universal de 1958. Recorre el interior del Atomium y conoce sus diferentes esferas conectadas por tubos y escaleras mecánicas. Desde sus niveles superiores disfruta de unas impresionantes vistas panorámicas de la ciudad y descubre las exposiciones que muestran la historia y el significado de esta singular construcción."
+    },
+    {
+      "titulo": "Excursión a Brujas",
+      "cuerpo": "Excursión a Brujas. Salida 8:00 AM desde el Hotel.\nRealiza una excursión a una de las ciudades medievales mejor conservadas de Europa. Recorre el centro histórico de Brujas y descubre sus canales, calles empedradas y edificios de arquitectura tradicional. Visita la Plaza Markt y la Plaza Burg, dos de los espacios más importantes de la ciudad, y disfruta de tiempo libre para conocer sus tiendas, chocolaterías y cafés. Una experiencia ideal para descubrir el encanto de Flandes."
+    },
+    {
+      "titulo": "Barrio europeo de Bruselas",
+      "cuerpo": "Visita al barrio europeo de Bruselas. Salida 9:00 AM desde el Hotel.\nConoce el corazón político de Europa recorriendo el barrio europeo de Bruselas. Visita el Parlamento Europeo y descubre el papel que desempeña esta institución en la toma de decisiones de la Unión Europea. Continúa el recorrido por el Parque del Cincuentenario y contempla el Arco del Triunfo, uno de los monumentos más importantes de esta zona de la ciudad. Disfruta de un recorrido que combina historia, arquitectura y actualidad europea."
+    },
+    {
+      "titulo": "Excursión a Gante",
+      "cuerpo": "Excursión a Gante. Salida 8:00 AM desde el Hotel.\nDescubre la ciudad de Gante, conocida por su impresionante patrimonio medieval y su ambiente universitario. Recorre el centro histórico y contempla el Castillo de los Condes de Flandes, el Campanario de Gante y la Catedral de San Bavón. Pasea por las orillas del río Lys y disfruta de sus canales, antiguas casas gremiales y plazas históricas. Tendrás tiempo libre para descubrir la gastronomía local y disfrutar del ambiente de esta encantadora ciudad belga."
+    }
+  ],
+  "Cancún": [
+    {
+      "titulo": "Recorrido panorámico por Cancún",
+      "cuerpo": "Recorrido panorámico por Cancún. Salida 9:00 AM desde el Hotel.\nDescubre los principales lugares de interés de Cancún en un recorrido por la ciudad. Conoce la Zona Hotelera, sus playas de arena blanca y las aguas turquesas del Caribe Mexicano. Continúa hacia el centro de Cancún para conocer su ambiente local, principales avenidas y espacios tradicionales. Disfruta de un recorrido que combina los paisajes costeros con la cultura y el ambiente de esta importante ciudad del Caribe."
+    },
+    {
+      "titulo": "Chichén Itzá",
+      "cuerpo": "Visita a Chichén Itzá. Salida 7:00 AM desde el Hotel.\nRealiza una excursión a una de las zonas arqueológicas más importantes de México y declarada Patrimonio de la Humanidad por la UNESCO. Descubre Chichén Itzá y contempla la impresionante pirámide de Kukulkán, el Gran Juego de Pelota y los antiguos templos y construcciones de esta ciudad maya. Conoce la historia y las tradiciones de una de las civilizaciones más importantes de Mesoamérica."
+    },
+    {
+      "titulo": "Isla Mujeres",
+      "cuerpo": "Excursión a Isla Mujeres. Salida 8:30 AM desde el Hotel.\nDisfruta de una excursión a Isla Mujeres, situada frente a la costa de Cancún. Navega por las aguas del Caribe Mexicano y descubre sus playas de arena blanca y aguas cristalinas. Recorre la isla y disfruta de tiempo libre para relajarte, practicar actividades acuáticas o conocer sus calles y pequeñas tiendas. Una jornada ideal para disfrutar de los paisajes y la tranquilidad del Caribe."
+    },
+    {
+      "titulo": "Tulum y Playa Paraíso",
+      "cuerpo": "Visita a Tulum y Playa Paraíso. Salida 7:30 AM desde el Hotel.\nDescubre la antigua ciudad maya de Tulum, situada frente al mar Caribe y rodeada de un paisaje natural espectacular. Recorre sus templos y construcciones arqueológicas mientras conoces la importancia que tuvo esta ciudad como centro comercial y ceremonial. Continúa hacia Playa Paraíso, donde podrás disfrutar de tiempo libre para relajarte frente al mar y contemplar uno de los paisajes costeros más característicos de la Riviera Maya."
+    },
+    {
+      "titulo": "Cenote y Valladolid",
+      "cuerpo": "Excursión a cenote y Valladolid. Salida 8:00 AM desde el Hotel.\nDescubre uno de los tradicionales cenotes de la península de Yucatán, formaciones naturales de agua dulce que fueron consideradas lugares sagrados por los antiguos mayas. Disfruta de tiempo para nadar y conocer este singular entorno natural. Continúa hacia Valladolid, una ciudad colonial conocida por sus calles coloridas, plazas y arquitectura tradicional. Recorre su centro histórico y disfruta de la gastronomía local."
+    },
+    {
+      "titulo": "Parque Nacional Isla Contoy",
+      "cuerpo": "Visita al Parque Nacional Isla Contoy. Salida 7:30 AM desde el Hotel.\nRealiza una excursión a Isla Contoy, un espacio natural protegido conocido por sus playas, arrecifes y gran diversidad de aves y especies marinas. Navega por las aguas del Caribe y disfruta de un recorrido rodeado de naturaleza. Tendrás tiempo para caminar por los senderos de la isla, relajarte en sus playas y disfrutar de sus aguas cristalinas antes de regresar a Cancún."
+    }
+  ],
+  "Estambul": [
+    {
+      "titulo": "Recorrido panorámico por la ciudad",
+      "cuerpo": "Recorrido panorámico por la ciudad. Salida 9:00 AM desde el Hotel.\nDescubre los principales lugares de interés de Estambul en un recorrido por la ciudad, ubicada entre Europa y Asia. Conoce algunos de sus monumentos más representativos y disfruta de las vistas del Cuerno de Oro, el Bósforo y los diferentes barrios históricos. Durante el recorrido podrás conocer la historia de esta ciudad que fue capital de los imperios Bizantino y Otomano, mientras descubres la combinación de culturas que caracteriza a Estambul."
+    },
+    {
+      "titulo": "Santa Sofía, Mezquita Azul y Hipódromo",
+      "cuerpo": "Visita a Santa Sofía, Mezquita Azul y Plaza del Hipódromo. Salida 9:00 AM desde el Hotel.\nDescubre algunos de los monumentos más importantes del centro histórico de Estambul. Visita Santa Sofía, uno de los edificios más emblemáticos de la ciudad, y conoce su impresionante historia y arquitectura. Continúa hacia la Mezquita Azul, famosa por sus elegantes minaretes y sus interiores decorados con azulejos. Finaliza el recorrido en la Plaza del Hipódromo, antiguo centro de reuniones y celebraciones durante la época bizantina."
+    },
+    {
+      "titulo": "Palacio de Topkapi y Gran Bazar",
+      "cuerpo": "Visita al Palacio de Topkapi y Gran Bazar. Salida 9:00 AM desde el Hotel.\nDescubre el antiguo Palacio de Topkapi, residencia de los sultanes otomanos durante varios siglos. Recorre sus patios, jardines y diferentes salas mientras conoces la historia del Imperio Otomano y disfrutas de las vistas sobre el Bósforo. Continúa hacia el Gran Bazar, uno de los mercados cubiertos más grandes y antiguos del mundo, donde podrás recorrer sus calles llenas de tiendas de artesanías, joyas, textiles, especias y productos tradicionales."
+    },
+    {
+      "titulo": "Crucero por el Bósforo y Bazar de las Especias",
+      "cuerpo": "Crucero por el Bósforo y visita al Bazar de las Especias. Salida 9:00 AM desde el Hotel.\nDisfruta de un recorrido en barco por el Bósforo, el estrecho que separa Europa de Asia y conecta el mar Negro con el mar de Mármara. Durante la navegación podrás contemplar palacios, mezquitas, fortalezas y elegantes residencias ubicadas a ambos lados del estrecho. A continuación, visita el Bazar de las Especias, donde encontrarás una gran variedad de aromas, dulces, frutos secos, especias y productos tradicionales de Turquía."
+    },
+    {
+      "titulo": "Palacio de Dolmabahçe y Ortaköy",
+      "cuerpo": "Visita al Palacio de Dolmabahçe y barrio de Ortaköy. Salida 9:00 AM desde el Hotel.\nDescubre el Palacio de Dolmabahçe, una de las construcciones más impresionantes de la época otomana y antigua residencia de los últimos sultanes. Recorre sus lujosos salones, grandes escaleras y espacios decorados con elementos europeos y otomanos. Continúa hacia Ortaköy, un pintoresco barrio situado junto al Bósforo, donde podrás disfrutar de sus cafés, pequeñas tiendas y de una de las vistas más conocidas del puente que conecta Europa y Asia."
+    },
+    {
+      "titulo": "Lado asiático y barrio de Kadıköy",
+      "cuerpo": "Visita al lado asiático de Estambul y barrio de Kadıköy. Salida 9:00 AM desde el Hotel.\nCruza hacia la parte asiática de Estambul para descubrir una perspectiva diferente de la ciudad. Recorre el animado barrio de Kadıköy, conocido por sus mercados, calles comerciales, restaurantes y ambiente local. Visita el mercado de alimentos y disfruta de tiempo libre para probar algunos productos de la gastronomía turca. Finaliza el recorrido junto al Bósforo, contemplando las vistas panorámicas del lado europeo de Estambul."
+    }
+  ],
+  "Fuerteventura": [
+    {
+      "titulo": "Recorrido panorámico por la isla",
+      "cuerpo": "Recorrido panorámico por la isla. Salida 9:00 AM desde el Hotel.\nDescubre los principales paisajes y lugares de interés de Fuerteventura en un recorrido por la isla. Conoce sus extensas playas, paisajes volcánicos y pequeños pueblos tradicionales mientras disfrutas de diferentes miradores con impresionantes vistas. Un recorrido ideal para conocer la diversidad natural de la isla y descubrir algunos de sus rincones más representativos."
+    },
+    {
+      "titulo": "Parque Natural de Corralejo",
+      "cuerpo": "Visita al Parque Natural de Corralejo. Salida 9:00 AM desde el Hotel.\nDescubre uno de los espacios naturales más espectaculares de Fuerteventura en el Parque Natural de Corralejo. Recorre sus grandes extensiones de dunas de arena blanca y disfruta de las vistas del océano Atlántico. Continúa hacia las playas de Grandes Playas de Corralejo, donde tendrás tiempo libre para caminar, relajarte y disfrutar de sus aguas cristalinas."
+    },
+    {
+      "titulo": "Isla de Lobos",
+      "cuerpo": "Excursión a la Isla de Lobos. Salida 8:30 AM desde el Hotel.\nRealiza una excursión en barco hasta la Isla de Lobos, un pequeño espacio natural situado frente a la costa de Fuerteventura. Descubre sus paisajes volcánicos, senderos y playas de aguas transparentes. Disfruta de tiempo libre para recorrer la isla y conocer su flora y fauna, además de relajarte en sus tranquilas calas rodeadas de naturaleza."
+    },
+    {
+      "titulo": "Betancuria y pueblos tradicionales",
+      "cuerpo": "Visita a Betancuria y pueblos tradicionales. Salida 9:00 AM desde el Hotel.\nDescubre Betancuria, antigua capital de Fuerteventura y uno de los pueblos históricos más importantes de la isla. Recorre sus calles tranquilas, casas tradicionales y edificios históricos mientras conoces la historia de los primeros asentamientos de la isla. Continúa hacia otros pequeños pueblos del interior para descubrir la arquitectura tradicional, los paisajes rurales y la gastronomía típica de Fuerteventura."
+    },
+    {
+      "titulo": "Cofete y Península de Jandía",
+      "cuerpo": "Excursión a Cofete y Península de Jandía. Salida 8:00 AM desde el Hotel.\nDescubre uno de los paisajes más impresionantes y salvajes de Fuerteventura recorriendo la Península de Jandía. Visita la espectacular Playa de Cofete, rodeada de montañas y abierta al océano Atlántico. Disfruta de diferentes miradores durante el recorrido y contempla la inmensidad de este paisaje natural. Una experiencia ideal para conocer una de las zonas más vírgenes de la isla."
+    },
+    {
+      "titulo": "El Cotillo y sus playas",
+      "cuerpo": "Visita a El Cotillo y sus playas. Salida 9:00 AM desde el Hotel.\nDescubre El Cotillo, un tradicional pueblo pesquero situado en la costa noroeste de Fuerteventura. Recorre sus calles y disfruta de su ambiente tranquilo junto al mar. Continúa hacia las diferentes playas y pequeñas calas de la zona, conocidas por sus aguas cristalinas y paisajes naturales. Disfruta de tiempo libre para relajarte, caminar por la costa y probar la gastronomía local."
+    }
+  ],
+  "Gran Canaria": [
+    {
+      "titulo": "Recorrido panorámico por Las Palmas",
+      "cuerpo": "Recorrido panorámico por Las Palmas de Gran Canaria. Salida 9:00 AM desde el Hotel.\nDescubre los principales lugares de interés de Las Palmas de Gran Canaria en un recorrido por la ciudad. Conoce el histórico barrio de Vegueta, sus calles tradicionales y algunos de los edificios más representativos de la capital. Continúa el recorrido hacia el barrio de Triana y disfruta de sus plazas, comercios y arquitectura tradicional. Una experiencia ideal para conocer la historia y el ambiente de la ciudad."
+    },
+    {
+      "titulo": "Dunas de Maspalomas",
+      "cuerpo": "Visita a las Dunas de Maspalomas. Salida 9:00 AM desde el Hotel.\nDescubre uno de los paisajes naturales más impresionantes de Gran Canaria en las Dunas de Maspalomas. Recorre este espectacular espacio de arena situado junto al océano Atlántico y disfruta de sus paisajes cambiantes. Continúa hacia el Faro de Maspalomas, uno de los símbolos del sur de la isla, y disfruta de tiempo libre en la zona para caminar, relajarte y contemplar el paisaje costero."
+    },
+    {
+      "titulo": "Tejeda y Roque Nublo",
+      "cuerpo": "Excursión a Tejeda y Roque Nublo. Salida 8:00 AM desde el Hotel.\nDescubre el interior montañoso de Gran Canaria en una excursión hacia Tejeda y el Roque Nublo. Recorre las carreteras que atraviesan los paisajes volcánicos de la isla y disfruta de impresionantes vistas desde los diferentes miradores. Realiza una caminata por los alrededores del Roque Nublo, uno de los monumentos naturales más importantes de Gran Canaria, y conoce la historia y las tradiciones de los pueblos de las montañas."
+    },
+    {
+      "titulo": "Puerto de Mogán",
+      "cuerpo": "Visita a Puerto de Mogán y recorrido por la costa. Salida 9:00 AM desde el Hotel.\nConoce Puerto de Mogán, uno de los lugares más encantadores del sur de Gran Canaria. Recorre sus calles decoradas con flores, pequeños canales y tradicionales casas blancas. Disfruta de tiempo libre para pasear por el puerto deportivo y contemplar las embarcaciones. Finaliza la jornada junto al mar, disfrutando de la playa y de la gastronomía local en alguno de los restaurantes de la zona."
+    },
+    {
+      "titulo": "Agaete y Puerto de las Nieves",
+      "cuerpo": "Excursión a Agaete y Puerto de las Nieves. Salida 8:00 AM desde el Hotel.\nDescubre el norte de Gran Canaria recorriendo el municipio de Agaete y el tradicional Puerto de las Nieves. Conoce sus calles, casas blancas y paisajes rodeados de montañas que llegan hasta el océano. Disfruta de un paseo junto al puerto y contempla las vistas de la costa. Durante el recorrido podrás conocer también el Valle de Agaete, famoso por sus paisajes agrícolas y sus cultivos tradicionales."
+    },
+    {
+      "titulo": "Playa de Las Canteras y Acuario Poema del Mar",
+      "cuerpo": "Visita a la Playa de Las Canteras y Acuario Poema del Mar. Salida 9:00 AM desde el Hotel.\nDisfruta de una jornada junto al mar en la Playa de Las Canteras, una de las playas urbanas más conocidas de España. Recorre su paseo marítimo y disfruta de tiempo libre para relajarte frente al Atlántico. A continuación, visita el Acuario Poema del Mar para descubrir la gran diversidad de especies marinas que habitan los diferentes océanos y conocer sus impresionantes espacios dedicados a la vida marina."
+    }
+  ],
+  "Lanzarote": [
+    {
+      "titulo": "Recorrido panorámico por la isla",
+      "cuerpo": "Recorrido panorámico por la isla. Salida 9:00 AM desde el Hotel.\nDescubre los principales paisajes y lugares de interés de Lanzarote en un recorrido por la isla. Conoce sus paisajes volcánicos, pueblos tradicionales y diferentes miradores con impresionantes vistas sobre el océano Atlántico. Disfruta de un recorrido que permite conocer la diversidad natural y cultural de Lanzarote, una isla marcada por su origen volcánico y por la arquitectura característica de sus pueblos."
+    },
+    {
+      "titulo": "Parque Nacional de Timanfaya",
+      "cuerpo": "Visita al Parque Nacional de Timanfaya. Salida 8:00 AM desde el Hotel.\nDescubre uno de los paisajes volcánicos más impresionantes de las Islas Canarias en el Parque Nacional de Timanfaya. Recorre la conocida Ruta de los Volcanes y contempla los cráteres, campos de lava y formaciones volcánicas que caracterizan este espacio natural. Durante la visita conocerás la historia de las erupciones que transformaron gran parte de la isla y podrás observar las demostraciones geotérmicas de la zona."
+    },
+    {
+      "titulo": "Jameos del Agua y Cueva de los Verdes",
+      "cuerpo": "Visita a Jameos del Agua y Cueva de los Verdes. Salida 9:00 AM desde el Hotel.\nDescubre dos de los lugares naturales más representativos de Lanzarote, creados a partir de antiguos tubos volcánicos. Recorre la Cueva de los Verdes y conoce sus impresionantes galerías subterráneas mientras descubres la historia y las características geológicas de este espacio. Continúa hacia Jameos del Agua, un singular espacio diseñado por César Manrique que combina naturaleza, arquitectura y arte en el interior de una antigua formación volcánica."
+    },
+    {
+      "titulo": "La Geria y bodegas de Lanzarote",
+      "cuerpo": "Excursión a La Geria y bodegas de Lanzarote. Salida 9:00 AM desde el Hotel.\nDescubre el singular paisaje de La Geria, una de las zonas vitivinícolas más características de Lanzarote. Recorre sus extensos campos de cultivo rodeados de ceniza volcánica y conoce el particular sistema utilizado por los agricultores para proteger las vides del viento. Visita una bodega tradicional de la isla y conoce el proceso de elaboración de los vinos de Lanzarote, con tiempo para disfrutar de una degustación de productos locales."
+    },
+    {
+      "titulo": "Teguise y Jardín de Cactus",
+      "cuerpo": "Visita a Teguise y Jardín de Cactus. Salida 9:00 AM desde el Hotel.\nConoce la histórica Villa de Teguise, antigua capital de Lanzarote, recorriendo sus calles, plazas y edificios tradicionales. Descubre la arquitectura característica de este pueblo y disfruta de tiempo libre para conocer sus tiendas y artesanías. Continúa hacia el Jardín de Cactus, una de las obras de César Manrique, donde podrás contemplar una gran variedad de especies de cactus en un espacio que combina naturaleza, arte y arquitectura."
+    },
+    {
+      "titulo": "Playa Papagayo y Marina Rubicón",
+      "cuerpo": "Visita a Playa Papagayo y Marina Rubicón. Salida 9:00 AM desde el Hotel.\nDisfruta de una jornada en el sur de Lanzarote visitando algunas de sus playas más conocidas. Recorre el entorno natural de Playa Papagayo, caracterizada por sus aguas cristalinas, arena dorada y paisajes volcánicos. Continúa hacia Marina Rubicón, un moderno puerto deportivo donde podrás pasear junto al mar, disfrutar de sus restaurantes y contemplar las embarcaciones. Una jornada ideal para despedir la estancia en la isla disfrutando de sus paisajes costeros."
+    }
+  ],
+  "Londres": [
+    {
+      "titulo": "Recorrido panorámico por la ciudad",
+      "cuerpo": "Recorrido panorámico por la ciudad. Salida 9:00 AM desde el Hotel.\nDescubre los principales lugares de interés de Londres en un recorrido por la ciudad. Conoce algunos de sus monumentos más representativos, como el Big Ben, las Casas del Parlamento, la Abadía de Westminster, la Torre de Londres, el Puente de Londres y la Catedral de San Pablo. Disfruta de un recorrido por las principales avenidas y barrios de la capital británica mientras conoces su historia y la importancia que ha tenido Londres a lo largo de los siglos."
+    },
+    {
+      "titulo": "Palacio de Buckingham y Westminster",
+      "cuerpo": "Visita al Palacio de Buckingham y Westminster. Salida 9:00 AM desde el Hotel.\nDescubre el Palacio de Buckingham, residencia oficial de la monarquía británica en Londres. Disfruta de los alrededores del palacio y, dependiendo del calendario, contempla la tradicional ceremonia del cambio de guardia. Continúa hacia Westminster para conocer la Abadía de Westminster y el Parlamento Británico, recorriendo una de las zonas más importantes de la historia política y monárquica del Reino Unido."
+    },
+    {
+      "titulo": "Museo Británico",
+      "cuerpo": "Visita al Museo Británico. Salida 9:00 AM desde el Hotel.\nDescubre una de las colecciones históricas más importantes del mundo en el Museo Británico. Recorre sus diferentes salas y conoce piezas procedentes de antiguas civilizaciones de Europa, Asia, África y América. Admira objetos de gran importancia histórica, como la Piedra de Rosetta y diferentes esculturas y piezas arqueológicas que permiten conocer la evolución de las grandes civilizaciones."
+    },
+    {
+      "titulo": "Torre de Londres y río Támesis",
+      "cuerpo": "Visita a la Torre de Londres y paseo por el río Támesis. Salida 9:00 AM desde el Hotel.\nDescubre la Torre de Londres, una de las fortalezas más antiguas y emblemáticas de la ciudad. Recorre sus torres y espacios históricos mientras conoces las historias relacionadas con la monarquía, prisioneros y acontecimientos que marcaron la historia inglesa. Admira las Joyas de la Corona y, posteriormente, disfruta de un paseo junto al río Támesis para contemplar algunos de los puentes y edificios históricos de la ciudad."
+    },
+    {
+      "titulo": "Greenwich",
+      "cuerpo": "Visita a Greenwich. Salida 9:00 AM desde el Hotel.\nDescubre Greenwich, uno de los barrios históricos más interesantes de Londres. Visita el Real Observatorio de Greenwich y conoce el lugar donde se estableció el meridiano cero, referencia para los husos horarios del mundo. Recorre Greenwich Park y disfruta de las vistas panorámicas sobre Londres. Continúa hacia el histórico Cutty Sark y disfruta de tiempo libre para conocer el mercado y las calles de esta zona junto al Támesis."
+    },
+    {
+      "titulo": "Castillo de Windsor",
+      "cuerpo": "Excursión al Castillo de Windsor. Salida 8:00 AM desde el Hotel.\nRealiza una excursión al Castillo de Windsor, una de las residencias reales más importantes del Reino Unido y uno de los castillos habitados más antiguos del mundo. Recorre sus impresionantes salones y patios y conoce la historia de la monarquía británica. Visita la Capilla de San Jorge y disfruta de tiempo libre para recorrer el centro histórico de Windsor antes de regresar a Londres."
+    }
+  ],
+  "Málaga": [
+    {
+      "titulo": "Recorrido panorámico por la ciudad",
+      "cuerpo": "Recorrido panorámico por la ciudad. Salida 9:00 AM desde el Hotel.\nDescubre los principales lugares de interés de Málaga en un recorrido por la ciudad. Conoce su centro histórico y contempla monumentos como la Alcazaba, el Teatro Romano, la Catedral de Málaga y el Castillo de Gibralfaro. Disfruta de un recorrido por las principales calles y avenidas de la ciudad mientras conoces su historia, cultura y la influencia de las diferentes civilizaciones que han pasado por Málaga."
+    },
+    {
+      "titulo": "Alcazaba y Castillo de Gibralfaro",
+      "cuerpo": "Visita a la Alcazaba y Castillo de Gibralfaro. Salida 9:00 AM desde el Hotel.\nDescubre dos de las construcciones históricas más importantes de Málaga. Recorre la Alcazaba, una antigua fortaleza de origen musulmán rodeada de jardines, patios y fuentes. Continúa hasta el Castillo de Gibralfaro, situado en lo alto de la colina, desde donde podrás disfrutar de unas impresionantes vistas panorámicas de la ciudad, el puerto y el Mediterráneo. Conoce la historia de estas fortificaciones y su importancia en la defensa de Málaga."
+    },
+    {
+      "titulo": "Museo Picasso Málaga",
+      "cuerpo": "Visita al Museo Picasso Málaga. Salida 9:00 AM desde el Hotel.\nDescubre la obra de uno de los artistas más importantes del siglo XX en el museo dedicado a Pablo Picasso, nacido en Málaga. Recorre sus diferentes salas y conoce distintas etapas de su trayectoria artística a través de una importante colección de pinturas, esculturas y otras obras. Después de la visita, disfruta de un paseo por las calles del centro histórico y descubre algunos de los lugares relacionados con la vida del artista en la ciudad."
+    },
+    {
+      "titulo": "Caminito del Rey",
+      "cuerpo": "Excursión al Caminito del Rey. Salida 8:00 AM desde el Hotel.\nDescubre uno de los senderos más espectaculares de España en una excursión al Caminito del Rey. Recorre las pasarelas construidas sobre las paredes del Desfiladero de los Gaitanes y disfruta de impresionantes paisajes naturales, acantilados y vistas sobre el río Guadalhorce. Acompañado por un guía, conoce la historia de este antiguo camino y disfruta de una experiencia única rodeado de naturaleza."
+    },
+    {
+      "titulo": "Nerja y Frigiliana",
+      "cuerpo": "Visita a Nerja y Frigiliana. Salida 8:00 AM desde el Hotel.\nRealiza una excursión por algunos de los lugares más encantadores de la Costa del Sol. Descubre Nerja y disfruta de las vistas desde el famoso Balcón de Europa, situado frente al Mediterráneo. Continúa hacia Frigiliana, uno de los pueblos blancos más bonitos de Andalucía, recorriendo sus calles estrechas, casas encaladas y tradicionales rincones llenos de flores. Disfruta de tiempo libre para conocer la gastronomía y el ambiente de estos dos destinos."
+    },
+    {
+      "titulo": "Puerto de Málaga, Muelle Uno y Malagueta",
+      "cuerpo": "Visita al Puerto de Málaga, Muelle Uno y Playa de la Malagueta. Salida 9:00 AM desde el Hotel.\nDisfruta de una jornada junto al Mediterráneo recorriendo el moderno Puerto de Málaga y el Muelle Uno, una zona llena de restaurantes, tiendas y espacios para caminar frente al mar. Continúa el recorrido hacia la Playa de la Malagueta, una de las playas más conocidas de la ciudad. Disfruta de tiempo libre para relajarte junto al Mediterráneo y probar algunos de los platos tradicionales de la gastronomía malagueña."
+    }
+  ],
+  "México City": [
+    {
+      "titulo": "Recorrido panorámico por la ciudad",
+      "cuerpo": "Recorrido panorámico por la ciudad. Salida 9:00 AM desde el Hotel.\nDescubre los principales lugares de interés de Ciudad de México en un recorrido por la ciudad. Conoce el Centro Histórico, el Paseo de la Reforma, el Monumento a la Revolución y algunas de las principales avenidas de la capital. Durante el recorrido podrás conocer la historia de una de las ciudades más grandes del mundo y descubrir la combinación entre arquitectura colonial, edificios modernos y espacios tradicionales que caracterizan a Ciudad de México."
+    },
+    {
+      "titulo": "Centro Histórico y Museo Nacional de Antropología",
+      "cuerpo": "Visita al Centro Histórico y Museo Nacional de Antropología. Salida 9:00 AM desde el Hotel.\nRecorre el corazón de Ciudad de México y conoce algunos de sus lugares más representativos, como el Zócalo, la Catedral Metropolitana y el Palacio Nacional. Continúa hacia el Museo Nacional de Antropología, uno de los museos más importantes de México, donde podrás conocer la historia y el legado de las diferentes culturas prehispánicas del país. Admira piezas arqueológicas de gran importancia y descubre la riqueza cultural de México."
+    },
+    {
+      "titulo": "Teotihuacán",
+      "cuerpo": "Visita a Teotihuacán. Salida 8:00 AM desde el Hotel.\nRealiza una excursión a la impresionante zona arqueológica de Teotihuacán, conocida como la Ciudad de los Dioses. Recorre la Calzada de los Muertos y contempla las grandes Pirámides del Sol y de la Luna, mientras conoces la historia de una de las civilizaciones más importantes de Mesoamérica. Disfruta de un recorrido por este antiguo centro ceremonial y descubre sus impresionantes construcciones y vestigios arqueológicos."
+    },
+    {
+      "titulo": "Museo Frida Kahlo y Coyoacán",
+      "cuerpo": "Visita al Museo Frida Kahlo y recorrido por Coyoacán. Salida 9:00 AM desde el Hotel.\nDescubre el famoso Museo Frida Kahlo, conocido como la Casa Azul, lugar donde nació, vivió y murió la reconocida artista mexicana. Recorre sus habitaciones, jardines y espacios personales mientras conoces diferentes aspectos de su vida y obra. Continúa hacia Coyoacán para disfrutar de sus calles, plazas y edificios tradicionales, además de conocer su ambiente cultural y gastronómico."
+    },
+    {
+      "titulo": "Paseo en trajinera por Xochimilco",
+      "cuerpo": "Paseo en trajinera por Xochimilco. Salida 9:00 AM desde el Hotel.\nDisfruta de una experiencia tradicional mexicana recorriendo los canales de Xochimilco a bordo de una colorida trajinera. Conoce este antiguo sistema de canales y sus famosas chinampas, consideradas parte importante del patrimonio cultural de la ciudad. Durante el recorrido podrás disfrutar de música tradicional, gastronomía local y el ambiente característico de uno de los lugares más representativos de Ciudad de México."
+    },
+    {
+      "titulo": "Castillo de Chapultepec y Paseo de la Reforma",
+      "cuerpo": "Visita al Castillo de Chapultepec y Paseo de la Reforma. Salida 9:00 AM desde el Hotel.\nDescubre el Castillo de Chapultepec, situado en lo alto del Bosque de Chapultepec y considerado uno de los edificios históricos más importantes de México. Recorre sus salones y terrazas mientras conoces diferentes etapas de la historia del país y disfruta de las vistas panorámicas de Ciudad de México. Continúa hacia el Paseo de la Reforma para contemplar algunos de sus monumentos y avenidas más emblemáticas, finalizando el recorrido con tiempo libre para disfrutar de la zona."
+    }
+  ],
+  "Palma de Mallorca": [
+    {
+      "titulo": "Catedral de Palma, La Seu",
+      "cuerpo": "Recorrido a la catedral de Palma, La Seu.\nEsta visita te permite visitar la catedral gótica de Palma, también conocida como La Seu. La catedral está ubicada en el paseo marítimo y es un símbolo de la ciudad. Cuenta con una impresionante arquitectura interior, unas maravillosas vidrieras iluminadas y una vasta historia."
+    },
+    {
+      "titulo": "City tour histórico de Palma",
+      "cuerpo": "City tour por la isla para unir la historia con la belleza natural de la isla. Con nuestro guía en español recorreremos el casco histórico de Palma de Mallorca en busca de todos sus detalles e identidad. Las casas señoriales acompañan nuestra ruta abrazando las calles de piedra gris que nos cobijan de los rayos del sol. Un paseo divertido e interesante donde conoceremos la fusión romana, musulmana y cristiana que da personalidad a la isla mediterránea.\nPalacio Real de la Almudaina\nPatios mallorquines\nEl Ayuntamiento\nPlaza Mayor\nPlaza España\nEl Consell de Mallorca\n¡Y mucho más!"
+    },
+    {
+      "titulo": "Ruta en bici por el casco antiguo",
+      "cuerpo": "Conoce las atracciones del casco antiguo de Palma de Mallorca en una visita guiada en bici de 3 h. Ve a los monumentos más importantes y conoce su historia con un guía experto. Descubre rincones ocultos. Después, prueba las mejores tapas de la ciudad.\nContempla las atracciones de Palma de Mallorca en bicicleta\nSaborea típicos platos mallorquines servidos en forma de tapas\nVisita la catedral de Palma y contempla el ayuntamiento\nAdmira la antigua fortaleza árabe que fuera el palacio real de La Almudaina\nPasa pedaleando bajo los árboles del paseo del Borne\nVisita la Plaza Mayor, el verdadero centro de Palma"
+    },
+    {
+      "titulo": "Cuevas del Drach",
+      "cuerpo": "Excursión a las Cuevas del Drach. Salida 9:00 AM desde el Hotel.\nDescubre uno de los lugares naturales más impresionantes de Mallorca con una visita a las Cuevas del Drach, un espectacular conjunto de cuevas subterráneas formadas durante miles de años. Recorre sus galerías y contempla las impresionantes formaciones de estalactitas y estalagmitas. Durante la visita podrás disfrutar de un paseo en barca por el lago Martel, uno de los lagos subterráneos más grandes del mundo, acompañado de un espectáculo de música clásica."
+    },
+    {
+      "titulo": "Valldemossa y Sóller",
+      "cuerpo": "Excursión a Valldemossa y Sóller. Salida 9:00 AM desde el Hotel.\nConoce algunos de los pueblos más encantadores de la Sierra de Tramuntana, declarada Patrimonio Mundial por la UNESCO. Recorre las calles de Valldemossa, famoso por sus casas de piedra, jardines y paisajes de montaña. Continúa hacia Sóller para descubrir su tradicional plaza, sus calles llenas de encanto y sus paisajes rodeados de montañas y naranjos. Disfruta de una jornada que combina naturaleza, cultura y la esencia de los pueblos mallorquines."
+    },
+    {
+      "titulo": "Formentor y Puerto de Pollença",
+      "cuerpo": "Excursión a Formentor y Puerto de Pollença. Salida 8:00 AM desde el Hotel.\nDescubre la belleza de la zona norte de Mallorca recorriendo algunos de sus paisajes más espectaculares. Visita el Mirador de Es Colomer para contemplar las impresionantes vistas del mar Mediterráneo y los acantilados de la costa. Continúa hacia la Playa de Formentor, rodeada de pinos y aguas cristalinas, donde tendrás tiempo libre para disfrutar del entorno. Finaliza el recorrido en Puerto de Pollença, un agradable destino costero ideal para pasear y disfrutar de las vistas al mar."
+    }
+  ],
+  "Pamplona": [
+    {
+      "titulo": "Recorrido panorámico por la ciudad",
+      "cuerpo": "Recorrido panorámico por la ciudad. Salida 9:00 AM desde el Hotel.\nDescubre los principales lugares de interés de Pamplona en un recorrido por la ciudad. Conoce el centro histórico y recorre algunos de los lugares más representativos de la capital navarra, como la Plaza del Castillo, el Ayuntamiento, la Plaza de Toros y las calles por donde pasa el famoso recorrido de los Sanfermines. Disfruta de un paseo por la ciudad mientras conoces su historia, tradiciones y el importante papel que ha tenido Pamplona a lo largo del Camino de Santiago."
+    },
+    {
+      "titulo": "Catedral de Santa María la Real y Casco Antiguo",
+      "cuerpo": "Visita a la Catedral de Santa María la Real y Casco Antiguo. Salida 9:00 AM desde el Hotel.\nDescubre uno de los monumentos religiosos e históricos más importantes de Pamplona. Visita la Catedral de Santa María la Real y conoce su impresionante interior de estilo gótico, además de su claustro y dependencias históricas. Continúa el recorrido por las calles del Casco Antiguo, descubriendo plazas, edificios tradicionales y rincones que forman parte de la historia de la ciudad."
+    },
+    {
+      "titulo": "Murallas de Pamplona y Ciudadela",
+      "cuerpo": "Recorrido por las Murallas de Pamplona y Ciudadela. Salida 9:00 AM desde el Hotel.\nDescubre el sistema defensivo que durante siglos protegió Pamplona. Recorre parte de sus antiguas murallas y disfruta de las vistas panorámicas sobre la ciudad y sus alrededores. Continúa hacia la Ciudadela, una impresionante fortificación renacentista rodeada de zonas verdes, donde podrás conocer su historia y disfrutar de un agradable paseo por uno de los espacios más emblemáticos de Pamplona."
+    },
+    {
+      "titulo": "Valle de Baztán",
+      "cuerpo": "Excursión al Valle de Baztán. Salida 8:00 AM desde el Hotel.\nDescubre uno de los paisajes naturales más encantadores de Navarra en una excursión por el Valle de Baztán. Recorre sus verdes montañas, pequeños pueblos y tradicionales casas de piedra mientras conoces las costumbres y tradiciones de esta zona del norte de Navarra. Visita localidades como Elizondo y disfruta de sus calles, plazas y paisajes, rodeados de naturaleza y tranquilidad."
+    },
+    {
+      "titulo": "Castillo de Olite y Bardenas Reales",
+      "cuerpo": "Excursión al Castillo de Olite y Bardenas Reales. Salida 8:00 AM desde el Hotel.\nDescubre dos lugares completamente diferentes de Navarra en una misma jornada. Visita el Palacio Real de Olite, una impresionante construcción medieval que fue residencia de los antiguos reyes de Navarra. Recorre sus torres, patios y galerías mientras conoces la historia de este singular castillo. Continúa hacia las Bardenas Reales, un paisaje semidesértico de formaciones rocosas, barrancos y grandes extensiones de tierra que ofrecen uno de los escenarios naturales más sorprendentes de la región."
+    },
+    {
+      "titulo": "Roncesvalles y Camino de Santiago",
+      "cuerpo": "Excursión a Roncesvalles y Camino de Santiago. Salida 8:00 AM desde el Hotel.\nDescubre Roncesvalles, uno de los lugares más importantes del Camino de Santiago y punto tradicional de entrada a España para los peregrinos que atraviesan los Pirineos. Visita la Colegiata de Santa María y conoce la historia de este antiguo enclave medieval. Disfruta de un recorrido por los paisajes de montaña de Navarra y descubre la importancia cultural y religiosa de esta ruta histórica."
+    }
+  ],
+  "Paris": [
+    {
+      "titulo": "Torre Eiffel",
+      "cuerpo": "Visita a la Torre Eiffel. Salida 9:00 AM desde el Hotel.\nDescubra uno de los monumentos más emblemáticos de París, construida para la Exposición Universal de 1889. Suba a los diferentes niveles de la Torre Eiffel para disfrutar de impresionantes vistas panorámicas de la ciudad. Conozca la historia de este símbolo parisino y admire desde las alturas lugares como el río Sena, los Campos de Marte y los principales monumentos de París."
     },
     {
       "titulo": "Recorrido en autobús por la ciudad",
+      "cuerpo": "Recorrido en autobús por la ciudad.\nDisfrute un tour panorámico por los principales monumentos de París: la Ópera Garnier, el Arco del Triunfo, la Torre Eiffel, el Museo del Louvre y los Campos Elíseos. El recorrido en autobús turístico de dos pisos le permitirá subir y bajar cuando desee para explorar cada punto a su ritmo."
+    },
+    {
+      "titulo": "Museo de Orsay",
+      "cuerpo": "Visita al Museo de Orsay. Salida 9:00 AM desde el Hotel.\nExplore una de las colecciones de arte impresionista y postimpresionista más importantes del mundo. Admire obras de grandes artistas como Monet, Renoir, Degas y Van Gogh, mientras recorre las diferentes salas del museo ubicado en una antigua estación de tren. Disfrute también de la arquitectura del edificio y de las vistas hacia el río Sena."
+    },
+    {
+      "titulo": "Museo del Louvre y crucero por el Sena",
+      "cuerpo": "Visita al Museo del Louvre. Salida 8:00 AM desde el hotel.\nExplore una de las colecciones de arte más importantes del mundo, incluyendo la Gioconda, la Venus de Milo y la Victoria alada de Samotracia.\nEn la tarde, disfrute un crucero por el río Sena para observar monumentos icónicos como Notre Dame, el Museo de Orsay y los puentes históricos de la ciudad."
+    },
+    {
+      "titulo": "Barrio de Le Marais",
+      "cuerpo": "Visita al barrio de Le Marais. Salida 9:00 AM desde el Hotel.\nDescubra uno de los barrios más encantadores y tradicionales de París, conocido por sus calles históricas, elegantes edificios y animadas plazas. Recorra la Place des Vosges, una de las plazas más antiguas de la ciudad, y conozca las pequeñas calles, tiendas y cafés que caracterizan este distrito. Disfrute de tiempo libre para descubrir sus galerías, boutiques y restaurantes."
+    },
+    {
+      "titulo": "Palacio de Versalles y Montmartre",
+      "cuerpo": "Visita al Palacio de Versalles.\nDescubra los lujosos salones reales, la Galería de los Espejos y los espectaculares jardines diseñados por André Le Nôtre.\nEn la tarde, recorrido libre por Montmartre para conocer la Basílica del Sagrado Corazón, la Place du Tertre y las calles bohemias que inspiraron a grandes artistas."
+    },
+    {
+      "titulo": "Arco del Triunfo y Campos Elíseos",
+      "cuerpo": "Visita al Arco del Triunfo y recorrido por los Campos Elíseos. Salida 9:00 AM desde el Hotel.\nConozca uno de los monumentos más representativos de París y descubra la historia del Arco del Triunfo, construido para conmemorar las victorias militares de Francia. Suba a su terraza para disfrutar de una vista panorámica de las principales avenidas de la ciudad. Continúe el recorrido por los Campos Elíseos, una de las avenidas más famosas de París, disfrutando de sus tiendas, restaurantes y espacios históricos."
+    }
+  ],
+  "Sevilla": [
+    {
+      "titulo": "Recorrido en autobús por la ciudad",
+      "cuerpo": "Recorrido en autobús por la ciudad.\nDescubre Sevilla a tu propio ritmo a bordo de un autobús turístico con paradas libres. Recorre los principales barrios y monumentos de la ciudad mientras conoces su historia y cultura. Durante el recorrido podrás contemplar lugares emblemáticos como la Plaza de España, la Torre del Oro, el Parque de María Luisa y el barrio de Triana, pudiendo subir y bajar del autobús para explorar los lugares que más te interesen."
+    },
+    {
+      "titulo": "Alcázar de Sevilla y Catedral",
+      "cuerpo": "Inicie el recorrido desde el looby del hotel, con tu guía en la Plaza del Triunfo y dirígete a la primera parada: el Alcázar de Sevilla. Comienza tu tour guiado después de usar la entrada prioritaria para ingresar al palacio. Escucha cómo se combinaron los estilos moriscos y cristianos para crear un palacio que fue un emblema de la arquitectura mudéjar. Descubre el patio de las Doncellas y el grandioso salón de Embajadores (ambos aparecen en \"Juego de Tronos\"). Admira sus intrincadas tallas y sus coloridos azulejos de estilo islámico. Luego, pasea por los jardines llenos de naranjos y apacibles fuentes de agua. A continuación, dirígete a la Catedral de Sevilla. Durante el tour guiado aprenderás sobre el importante papel de la catedral en la historia de la ciudad y las influencias islámicas, góticas tardías, renacentistas y barrocas de su arquitectura."
+    },
+    {
+      "titulo": "Espectáculo de flamenco en la Casa de la Memoria",
+      "cuerpo": "Haz un recorrido por la historia y la cultura de Sevilla con un espectáculo de flamenco de una hora de duración en la Casa de la Memoria. El flamenco, que se remonta a finales del siglo XVIII, tiene una importancia central en la cultura española, ya que ilustra la mezcla de los diferentes pueblos que, durante siglos, se han referido a esta nación como su hogar.\nEn un teatro íntimo del siglo XV, te sumergirás en el colorido mundo del flamenco mientras los bailarines se mueven al ritmo de la vibrante guitarra. Maravíllate ante los elaborados trajes y el innegable talento de los intérpretes. Siente la intensidad emocional de la tradición flamenca, y aprecia esta expresión artística que define una región."
+    },
+    {
+      "titulo": "Plaza de España y Parque de María Luisa",
+      "cuerpo": "Visita a la Plaza de España y Parque de María Luisa. Salida 9:00 AM desde el Hotel.\nDescubre uno de los espacios más representativos de Sevilla, comenzando el recorrido por la espectacular Plaza de España, construida para la Exposición Iberoamericana de 1929. Admira sus grandes dimensiones, sus puentes, fuentes y bancos decorados con azulejos que representan las diferentes provincias de España. A continuación, disfruta de un paseo por el Parque de María Luisa, uno de los principales pulmones verdes de la ciudad, rodeado de jardines, monumentos y espacios llenos de tranquilidad."
+    },
+    {
+      "titulo": "Barrio de Triana y río Guadalquivir",
+      "cuerpo": "Visita al barrio de Triana y recorrido junto al río Guadalquivir. Salida 9:00 AM desde el Hotel.\nConoce uno de los barrios con más personalidad de Sevilla, famoso por su tradición alfarera, sus patios y su estrecha relación con el flamenco. Recorre sus calles y descubre la historia de sus talleres de cerámica y sus tradicionales casas. Continúa el paseo hacia la orilla del río Guadalquivir, desde donde podrás disfrutar de una agradable panorámica de la ciudad y del Puente de Isabel II, conocido como Puente de Triana."
+    },
+    {
+      "titulo": "Torre del Oro y paseo en barco",
+      "cuerpo": "Visita a la Torre del Oro y paseo en barco por el río Guadalquivir. Salida 9:00 AM desde el Hotel.\nComienza la jornada con una visita a la Torre del Oro, una antigua construcción defensiva situada junto al río Guadalquivir que forma parte de la historia de Sevilla. Conoce su importancia durante la época de esplendor comercial de la ciudad y disfruta de las vistas desde sus alrededores. A continuación, realiza un paseo en barco por el río Guadalquivir, contemplando Sevilla desde una perspectiva diferente y pasando junto a algunos de los lugares más emblemáticos de la ciudad."
+    }
+  ],
+  "Tarragona": [
+    {
+      "titulo": "Recorrido panorámico por la ciudad",
+      "cuerpo": "Recorrido panorámico por la ciudad. Salida 9:00 AM desde el Hotel.\nDescubre los principales lugares de interés de Tarragona en un recorrido por la ciudad. Conoce su importante pasado romano mientras recorres el centro histórico, las antiguas murallas y algunos de sus monumentos más representativos. Disfruta de un paseo por las principales calles y plazas de la ciudad mientras conoces la historia de Tarraco y su importancia durante el Imperio Romano."
+    },
+    {
+      "titulo": "Anfiteatro Romano y Circo Romano",
+      "cuerpo": "Visita al Anfiteatro Romano y Circo Romano. Salida 9:00 AM desde el Hotel.\nDescubre algunos de los restos arqueológicos más importantes de la antigua Tarraco. Visita el Anfiteatro Romano, situado junto al mar Mediterráneo, donde antiguamente se celebraban espectáculos y combates. Continúa hacia el Circo Romano y conoce la importancia que tuvieron estos espacios en la vida pública de la ciudad. Disfruta de un recorrido por el patrimonio romano mientras descubres cómo era Tarragona durante la época imperial."
+    },
+    {
+      "titulo": "Catedral de Tarragona y Casco Histórico",
+      "cuerpo": "Visita a la Catedral de Tarragona y Casco Histórico. Salida 9:00 AM desde el Hotel.\nRecorre el corazón histórico de Tarragona y visita la Catedral de Santa María, una de las construcciones religiosas más importantes de la ciudad. Admira su arquitectura y conoce los diferentes estilos que se fueron incorporando durante su construcción. Continúa por las calles del casco antiguo, descubriendo plazas, edificios históricos y rincones tradicionales rodeados de la antigua muralla romana."
+    },
+    {
+      "titulo": "Acueducto de les Ferreres y Monasterio de Poblet",
+      "cuerpo": "Excursión al Acueducto de les Ferreres y Monasterio de Poblet. Salida 8:00 AM desde el Hotel.\nDescubre el impresionante Acueducto de les Ferreres, también conocido como Pont del Diable, una de las obras de ingeniería romana mejor conservadas de la zona. Recorre sus alrededores y conoce la importancia que tuvo para el suministro de agua de Tarraco. Continúa hacia el Monasterio de Poblet, declarado Patrimonio de la Humanidad por la UNESCO, donde podrás conocer su impresionante arquitectura y la historia de la comunidad monástica."
+    },
+    {
+      "titulo": "Sitges y costa mediterránea",
+      "cuerpo": "Excursión a Sitges y costa mediterránea. Salida 9:00 AM desde el Hotel.\nDescubre Sitges, uno de los destinos costeros más conocidos de Cataluña. Recorre sus calles blancas, pequeñas plazas y paseo marítimo mientras disfrutas del ambiente mediterráneo. Conoce su patrimonio cultural y artístico y disfruta de tiempo libre para recorrer sus tiendas, cafés y restaurantes. Finaliza la jornada junto al mar disfrutando de sus playas y paisajes costeros."
+    },
+    {
+      "titulo": "PortAventura World",
+      "cuerpo": "Visita a PortAventura World. Salida 9:00 AM desde el Hotel.\nDisfruta de un día diferente en uno de los principales parques de entretenimiento de España. Recorre sus diferentes áreas temáticas inspiradas en distintas regiones y culturas del mundo y disfruta de sus atracciones, espectáculos y espacios para toda la familia. Una jornada de diversión y entretenimiento para cerrar la estancia en Tarragona."
+    }
+  ],
+  "Tenerife": [
+    {
+      "titulo": "Recorrido panorámico por la isla",
+      "cuerpo": "Recorrido panorámico por la isla. Salida 9:00 AM desde el Hotel.\nDescubre algunos de los principales paisajes y lugares de interés de Tenerife en un recorrido por la isla. Conoce sus diferentes paisajes, desde la costa hasta las zonas montañosas, mientras descubres la diversidad natural y cultural de este destino. Disfruta de un recorrido por algunos de sus pueblos y miradores más representativos, acompañado de un guía que te contará la historia y las tradiciones de Tenerife."
+    },
+    {
+      "titulo": "Parque Nacional del Teide",
+      "cuerpo": "Visita al Parque Nacional del Teide. Salida 8:00 AM desde el Hotel.\nDescubre el paisaje volcánico del Parque Nacional del Teide, declarado Patrimonio de la Humanidad por la UNESCO. Recorre los diferentes miradores y formaciones volcánicas que rodean el Teide, el punto más alto de España. Disfruta de un paisaje único formado por antiguos cráteres, lava y montañas mientras conoces la historia geológica de la isla. Opcionalmente, podrás subir en teleférico para acercarte a las zonas más altas del volcán."
+    },
+    {
+      "titulo": "La Laguna y Santa Cruz de Tenerife",
+      "cuerpo": "Excursión a La Laguna y Santa Cruz de Tenerife. Salida 9:00 AM desde el Hotel.\nDescubre San Cristóbal de La Laguna, ciudad declarada Patrimonio de la Humanidad por la UNESCO. Recorre sus calles históricas, plazas y edificios tradicionales mientras conoces su importante patrimonio arquitectónico. Continúa hacia Santa Cruz de Tenerife para conocer el centro de la capital, sus principales avenidas y espacios culturales. Disfruta de tiempo libre para recorrer sus calles, tiendas y restaurantes."
+    },
+    {
+      "titulo": "Parque Rural de Anaga",
+      "cuerpo": "Excursión al Parque Rural de Anaga. Salida 8:00 AM desde el Hotel.\nDescubre uno de los paisajes naturales más impresionantes de Tenerife en el Parque Rural de Anaga. Recorre sus carreteras entre montañas, bosques y pequeños pueblos tradicionales mientras disfrutas de diferentes miradores con vistas panorámicas sobre el océano Atlántico. Realiza una caminata por alguno de sus senderos y conoce la riqueza natural de este espacio protegido, caracterizado por sus antiguos bosques y espectaculares formaciones montañosas."
+    },
+    {
+      "titulo": "Avistamiento de ballenas y delfines",
+      "cuerpo": "Avistamiento de ballenas y delfines. Salida 9:00 AM desde el Puerto.\nDisfruta de una experiencia navegando por las aguas del Atlántico para observar algunas de las especies marinas que habitan frente a las costas de Tenerife. Durante el recorrido tendrás la oportunidad de avistar delfines, ballenas piloto y otras especies marinas en su hábitat natural. Relájate a bordo mientras contemplas la costa de la isla desde el mar y disfrutas de una experiencia diferente rodeado de naturaleza."
+    },
+    {
+      "titulo": "Garachico, Icod de los Vinos y Puerto de la Cruz",
+      "cuerpo": "Visita a Garachico, Icod de los Vinos y Puerto de la Cruz. Salida 8:00 AM desde el Hotel.\nRecorre algunos de los pueblos más tradicionales del norte de Tenerife. Descubre Garachico y sus calles históricas, plazas y piscinas naturales formadas por antiguas erupciones volcánicas. Continúa hacia Icod de los Vinos para conocer el famoso Drago Milenario y disfrutar de sus paisajes. Finaliza el recorrido en Puerto de la Cruz, donde podrás pasear por sus calles, disfrutar de su ambiente costero y conocer algunos de sus principales lugares de interés."
+    }
+  ],
+  "Valencia": [
+    {
+      "titulo": "Recorrido en autobús por la ciudad",
       "cuerpo": "Recorrido en autobús por la ciudad.\nEn la costa del Mediterráneo, Valencia es una ciudad moderna con una rica historia gótica y romana. Explore la ciudad a su propio ritmo en una excursión en autobús turístico con paradas libres. Viaje entre las dos rutas en un autobús de dos pisos con techo descubierto, pudiendo subir y bajar cuando quiera. Esta excursión turística le ofrece 17 paradas por toda la ciudad, así que, si lo desea, puede ver lugares de interés como el Palacio San Pio V o la Catedral de Valencia."
+    },
+    {
+      "titulo": "Ciudad de las Artes y las Ciencias",
+      "cuerpo": "Visita a la ciudad de las artes y las ciencias. Salida 8:00 AM desde el Hotel\nDescubra la interesante Ciudad de las Artes y las Ciencias, la parte más moderna de Valencia. El billete combinado le permite conocer varios de sus edificios como el Museo de la Ciencia Príncipe Felipe o el Oceanográfica, así como una visita guiada a lo largo de todo el complejo, visitando la espectacular ciudad creada por Santiago Calatrava y la función de cada uno de los edificios."
+    },
+    {
+      "titulo": "Centro histórico de Valencia",
+      "cuerpo": "Visita al centro histórico de Valencia. Salida 9:00 AM desde el Hotel.\nDescubra el corazón histórico de Valencia recorriendo algunos de sus lugares más emblemáticos. Visite el Mercado Central, uno de los mercados de productos frescos más grandes de Europa, y conozca la Lonja de la Seda, declarada Patrimonio de la Humanidad por la UNESCO. Disfrute de un recorrido por las calles del centro histórico, conociendo la arquitectura, plazas y rincones más tradicionales de la ciudad."
+    },
+    {
+      "titulo": "Parque Natural de la Albufera",
+      "cuerpo": "Excursión al Parque Natural de la Albufera. Salida 9:00 AM desde el Hotel.\nDescubra uno de los espacios naturales más importantes de Valencia, situado a pocos kilómetros de la ciudad. Realice un paseo en barca por la laguna de la Albufera, rodeado de paisajes naturales y arrozales. Durante la visita podrá conocer la tradición de este lugar y disfrutar de uno de los paisajes más representativos de la Comunidad Valenciana."
+    },
+    {
+      "titulo": "Bioparc Valencia",
+      "cuerpo": "Visita al Bioparc Valencia. Salida 9:00 AM desde el Hotel.\nDescubra el Bioparc Valencia, un moderno parque zoológico diseñado bajo el concepto de inmersión en los hábitats naturales. Recorra sus diferentes espacios dedicados a la fauna africana y observe de cerca animales como elefantes, jirafas, leones y gorilas. Una experiencia ideal para conocer la naturaleza y disfrutar de un recorrido diferente durante su estancia en Valencia."
+    },
+    {
+      "titulo": "Playa de la Malvarrosa y Marina de Valencia",
+      "cuerpo": "Visita a la Playa de la Malvarrosa y Marina de Valencia. Salida 9:00 AM desde el Hotel.\nDisfrute de una jornada junto al Mediterráneo recorriendo la Playa de la Malvarrosa, una de las playas más conocidas de Valencia. Continúe el recorrido hacia la Marina de Valencia, un espacio abierto junto al mar con restaurantes, terrazas y zonas para caminar. Disfrute de tiempo libre para conocer el ambiente marítimo de la ciudad y contemplar las vistas del Mediterráneo."
     }
   ]
 }
