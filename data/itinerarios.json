@@ -275,6 +275,32 @@
       "cuerpo": "Visita a la Playa de Las Canteras y Acuario Poema del Mar. Salida 9:00 AM desde el Hotel.\nDisfruta de una jornada junto al mar en la Playa de Las Canteras, una de las playas urbanas más conocidas de España. Recorre su paseo marítimo y disfruta de tiempo libre para relajarte frente al Atlántico. A continuación, visita el Acuario Poema del Mar para descubrir la gran diversidad de especies marinas que habitan los diferentes océanos y conocer sus impresionantes espacios dedicados a la vida marina."
     }
   ],
+  "Ibiza": [
+    {
+      "titulo": "Recorrido panorámico por Ibiza",
+      "cuerpo": "Recorrido panorámico por Ibiza. Salida 9:00 AM desde el Hotel.\nDescubre los principales lugares de interés de la isla en un recorrido panorámico. Conoce la ciudad de Ibiza, sus calles tradicionales y algunos de sus miradores más destacados mientras disfrutas de las vistas del Mediterráneo. Una experiencia ideal para descubrir la combinación de historia, naturaleza y ambiente mediterráneo que caracteriza a la isla."
+    },
+    {
+      "titulo": "Dalt Vila y casco histórico",
+      "cuerpo": "Visita a Dalt Vila y casco histórico de Ibiza. Salida 9:00 AM desde el Hotel.\nRecorre Dalt Vila, la ciudad amurallada de Ibiza declarada Patrimonio de la Humanidad por la UNESCO. Pasea por sus calles empedradas, plazas y antiguas murallas mientras descubres la historia de la isla. Disfruta de las impresionantes vistas sobre el puerto y el Mediterráneo desde los diferentes miradores del casco antiguo."
+    },
+    {
+      "titulo": "Formentera",
+      "cuerpo": "Excursión a Formentera. Salida 8:30 AM desde el Hotel.\nRealiza una excursión en barco hasta la cercana isla de Formentera. Descubre sus aguas cristalinas, playas de arena blanca y paisajes naturales mientras recorres algunos de sus lugares más representativos. Disfruta de tiempo libre para relajarte junto al Mediterráneo, conocer sus pequeños pueblos y contemplar uno de los paisajes más espectaculares de las Islas Baleares."
+    },
+    {
+      "titulo": "Las mejores calas de Ibiza",
+      "cuerpo": "Excursión por las calas de Ibiza. Salida 9:00 AM desde el Hotel.\nDescubre algunas de las calas más bonitas de Ibiza, rodeadas de naturaleza y aguas transparentes. Visita lugares como Cala Comte, Cala Bassa y Cala d'Hort, disfrutando de sus paisajes y del ambiente mediterráneo. Tendrás tiempo libre para relajarte en la playa, nadar y contemplar las impresionantes vistas de la costa."
+    },
+    {
+      "titulo": "Santa Eulalia y Es Canar",
+      "cuerpo": "Visita a Santa Eulalia y Es Canar. Salida 9:00 AM desde el Hotel.\nConoce Santa Eulalia del Río, uno de los principales destinos turísticos de Ibiza, recorriendo su paseo marítimo, puerto y calles tradicionales. Continúa hacia Es Canar para disfrutar de su ambiente costero y sus playas. Una jornada perfecta para descubrir una Ibiza más tranquila, combinando paisajes mediterráneos, cultura y gastronomía local."
+    },
+    {
+      "titulo": "Sant Antoni de Portmany y puesta de sol",
+      "cuerpo": "Visita a Sant Antoni de Portmany y puesta de sol. Salida 3:00 PM desde el Hotel.\nDescubre Sant Antoni de Portmany, uno de los destinos más conocidos de la costa de Ibiza. Recorre su paseo marítimo y disfruta de tiempo libre para conocer sus tiendas, restaurantes y puerto. Al finalizar la tarde, contempla una espectacular puesta de sol sobre el Mediterráneo desde alguno de los lugares más emblemáticos de la bahía."
+    }
+  ],
   "Lanzarote": [
     {
       "titulo": "Recorrido panorámico por la isla",
